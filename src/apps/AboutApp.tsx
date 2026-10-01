@@ -3,7 +3,7 @@ import { FiDownload, FiSend } from 'react-icons/fi'
 import Avatar from '../components/Avatar'
 import SocialLinks from '../components/SocialLinks'
 import { yearsOfExperience } from '../data/profile'
-import { CV_URL } from '../lib/constants'
+import { cvUrl } from '../lib/constants'
 import { useAppHost } from './AppHost'
 
 export default function AboutApp() {
@@ -55,7 +55,7 @@ export default function AboutApp() {
           <FiSend aria-hidden /> {t('about.contactMe')}
         </button>
         <a
-          href={CV_URL}
+          href={cvUrl()}
           download
           className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium hover:bg-accent-soft"
         >

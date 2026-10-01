@@ -9,7 +9,7 @@ import { useAppHost } from '../apps/AppHost'
 import { APPS, DESKTOP_ORDER } from '../apps/registry'
 import { CONTACTS } from '../data/profile'
 import { LANGUAGES } from '../i18n'
-import { CV_URL } from '../lib/constants'
+import { cvUrl } from '../lib/constants'
 import { navigate } from '../lib/router'
 import { usePaletteStore } from '../store/palette'
 import { useThemeStore } from '../store/theme'
@@ -85,7 +85,7 @@ function Palette({ onClose }: { onClose: () => void }) {
         icon: <FiDownload />,
         run: () => {
           const a = document.createElement('a')
-          a.href = CV_URL
+          a.href = cvUrl()
           a.download = ''
           a.click()
         },

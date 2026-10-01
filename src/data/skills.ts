@@ -1,4 +1,4 @@
-﻿import type { IconType } from 'react-icons'
+import type { IconType } from 'react-icons'
 import {
   SiBootstrap,
   SiClaude,
@@ -17,6 +17,7 @@ import {
   SiJinja,
   SiJira,
   SiJsonwebtokens,
+  SiMobx,
   SiMongodb,
   SiMui,
   SiMysql,
@@ -26,7 +27,6 @@ import {
   SiReact,
   SiReacthookform,
   SiRedux,
-  SiMobx,
   SiSass,
   SiSqlalchemy,
   SiStyledcomponents,
@@ -36,8 +36,9 @@ import {
   SiVite,
   SiZod,
 } from 'react-icons/si'
-import { TbApi, TbTestPipe } from 'react-icons/tb'
+import { TbApi, TbCode, TbTestPipe } from 'react-icons/tb'
 import { VscAzure } from 'react-icons/vsc'
+import content from './content.json'
 
 export type Skill = {
   name: string
@@ -51,69 +52,50 @@ export type SkillGroup = {
   skills: Skill[]
 }
 
-export const SKILL_GROUPS: SkillGroup[] = [
-  {
-    id: 'frontend',
-    skills: [
-      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-      { name: 'React.js', icon: SiReact, color: '#61DAFB' },
-      { name: 'Redux / RTK Query', icon: SiRedux, color: '#764ABC' },
-      { name: 'MobX', icon: SiMobx, color: '#FF9955' },
-      { name: 'React Hook Form', icon: SiReacthookform, color: '#EC5990' },
-      { name: 'Zod', icon: SiZod, color: '#3E67B1' },
-      { name: 'i18next', icon: SiI18Next, color: '#26A69A' },
-      { name: 'MUI', icon: SiMui, color: '#007FFF' },
-      { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
-      { name: 'SCSS', icon: SiSass, color: '#CC6699' },
-      { name: 'Styled Components', icon: SiStyledcomponents, color: '#DB7093' },
-      { name: 'Vite', icon: SiVite, color: '#646CFF' },
-      { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
-      { name: 'CSS', icon: SiCss, color: '#663399' },
-      { name: 'Bootstrap', icon: SiBootstrap, color: '#7952B3' },
-    ],
-  },
-  {
-    id: 'backend',
-    skills: [
-      { name: 'Python', icon: SiPython, color: '#3776AB' },
-      { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
-      { name: 'Django', icon: SiDjango, color: '#44B78B' },
-      { name: 'Django REST Framework', icon: SiDjango, color: '#A30000' },
-      { name: 'Flask', icon: SiFlask },
-      { name: 'SQLAlchemy', icon: SiSqlalchemy, color: '#D71F00' },
-      { name: 'Jinja2', icon: SiJinja, color: '#B41717' },
-      { name: 'Pandas', icon: SiPandas, color: '#150458' },
-    ],
-  },
-  {
-    id: 'databases',
-    skills: [
-      { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
-      { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
-      { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-    ],
-  },
-  {
-    id: 'apis',
-    skills: [
-      { name: 'REST APIs', icon: TbApi, color: '#6366F1' },
-      { name: 'JWT Auth', icon: SiJsonwebtokens, color: '#D63AFF' },
-      { name: 'Unit & Integration Testing', icon: TbTestPipe, color: '#16A34A' },
-    ],
-  },
-  {
-    id: 'tools',
-    skills: [
-      { name: 'Git', icon: SiGit, color: '#F05032' },
-      { name: 'GitHub', icon: SiGithub },
-      { name: 'GitLab', icon: SiGitlab, color: '#FC6D26' },
-      { name: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF' },
-      { name: 'Docker', icon: SiDocker, color: '#2496ED' },
-      { name: 'Azure Static Web Apps', icon: VscAzure, color: '#0078D4' },
-      { name: 'Jira', icon: SiJira, color: '#0052CC' },
-      { name: 'Trello', icon: SiTrello, color: '#0079BF' },
-      { name: 'Claude Code', icon: SiClaude, color: '#D97757' },
-    ],
-  },
-]
+// Which skills exist (and in which group) is defined in content.json; this only adds the logos.
+const STYLES: Record<string, Omit<Skill, 'name'>> = {
+  JavaScript: { icon: SiJavascript, color: '#F7DF1E' },
+  TypeScript: { icon: SiTypescript, color: '#3178C6' },
+  'React.js': { icon: SiReact, color: '#61DAFB' },
+  'Redux / RTK Query': { icon: SiRedux, color: '#764ABC' },
+  MobX: { icon: SiMobx, color: '#FF9955' },
+  'React Hook Form': { icon: SiReacthookform, color: '#EC5990' },
+  Zod: { icon: SiZod, color: '#3E67B1' },
+  i18next: { icon: SiI18Next, color: '#26A69A' },
+  MUI: { icon: SiMui, color: '#007FFF' },
+  'Tailwind CSS': { icon: SiTailwindcss, color: '#06B6D4' },
+  SCSS: { icon: SiSass, color: '#CC6699' },
+  'Styled Components': { icon: SiStyledcomponents, color: '#DB7093' },
+  Vite: { icon: SiVite, color: '#646CFF' },
+  HTML5: { icon: SiHtml5, color: '#E34F26' },
+  CSS: { icon: SiCss, color: '#663399' },
+  Bootstrap: { icon: SiBootstrap, color: '#7952B3' },
+  Python: { icon: SiPython, color: '#3776AB' },
+  FastAPI: { icon: SiFastapi, color: '#009688' },
+  Django: { icon: SiDjango, color: '#44B78B' },
+  'Django REST Framework': { icon: SiDjango, color: '#A30000' },
+  Flask: { icon: SiFlask },
+  SQLAlchemy: { icon: SiSqlalchemy, color: '#D71F00' },
+  Jinja2: { icon: SiJinja, color: '#B41717' },
+  Pandas: { icon: SiPandas, color: '#150458' },
+  PostgreSQL: { icon: SiPostgresql, color: '#4169E1' },
+  MySQL: { icon: SiMysql, color: '#4479A1' },
+  MongoDB: { icon: SiMongodb, color: '#47A248' },
+  'REST APIs': { icon: TbApi, color: '#6366F1' },
+  'JWT Auth': { icon: SiJsonwebtokens, color: '#D63AFF' },
+  'Unit & Integration Testing': { icon: TbTestPipe, color: '#16A34A' },
+  Git: { icon: SiGit, color: '#F05032' },
+  GitHub: { icon: SiGithub },
+  GitLab: { icon: SiGitlab, color: '#FC6D26' },
+  'GitHub Actions': { icon: SiGithubactions, color: '#2088FF' },
+  Docker: { icon: SiDocker, color: '#2496ED' },
+  'Azure Static Web Apps': { icon: VscAzure, color: '#0078D4' },
+  Jira: { icon: SiJira, color: '#0052CC' },
+  Trello: { icon: SiTrello, color: '#0079BF' },
+  'Claude Code': { icon: SiClaude, color: '#D97757' },
+}
+
+export const SKILL_GROUPS: SkillGroup[] = content.skillGroups.map((group) => ({
+  id: group.id as SkillGroup['id'],
+  skills: group.skills.map((name) => ({ name, ...(STYLES[name] ?? { icon: TbCode }) })),
+}))

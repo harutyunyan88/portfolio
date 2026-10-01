@@ -7,7 +7,7 @@ import { SKILL_GROUPS } from '../data/skills'
 import { LANGUAGES } from '../i18n'
 import { formatMonth } from '../lib/format'
 import { useThemeStore } from '../store/theme'
-import { CV_URL } from '../lib/constants'
+import { cvUrl } from '../lib/constants'
 import { useAppHost } from './AppHost'
 import { DESKTOP_ORDER, type AppId } from './registry'
 
@@ -106,7 +106,7 @@ export default function TerminalApp() {
         )
       case 'cv': {
         const link = document.createElement('a')
-        link.href = CV_URL
+        link.href = cvUrl()
         link.download = ''
         link.click()
         return t('terminal.downloading')

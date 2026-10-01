@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { APPS, type AppId } from '../../apps/registry'
 import { useClock } from '../../hooks/useClock'
 import { TASKBAR_HEIGHT, useWindowsStore } from '../../store/windows'
+import Avatar from '../Avatar'
 import LanguageSwitcher from '../controls/LanguageSwitcher'
 import SearchButton from '../controls/SearchButton'
 import ThemeToggle from '../controls/ThemeToggle'
@@ -40,9 +41,7 @@ export default function Taskbar() {
           startOpen && 'bg-accent-soft',
         )}
       >
-        <span className="grid size-6 place-items-center rounded-md bg-gradient-to-br from-indigo-500 to-pink-500 text-[10px] font-bold text-white">
-          AH
-        </span>
+        <Avatar className="size-7 text-[10px]" ring={2} />
       </button>
       {startOpen && <StartMenu onClose={() => setStartOpen(false)} toggleRef={startRef} />}
 

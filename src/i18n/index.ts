@@ -1,9 +1,7 @@
-import i18n from 'i18next'
+import i18n, { type BackendModule } from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 import en from './locales/en.json'
-import hy from './locales/hy.json'
-import ru from './locales/ru.json'
 
 export const LANGUAGES = [
   { code: 'en', label: 'EN', name: 'English' },
@@ -13,12 +11,28 @@ export const LANGUAGES = [
 
 export type LanguageCode = (typeof LANGUAGES)[number]['code']
 
+// English is bundled (it's the default and the fallback); the others load only when chosen.
+const lazyLocales: BackendModule = {
+  type: 'backend',
+  init: () => {},
+  read: (language, _namespace, callback) => {
+    const load = { ru: () => import('./locales/ru.json'), hy: () => import('./locales/hy.json') }[language]
+    if (!load) return callback(null, {})
+    load().then(
+      (module) => callback(null, module.default),
+      (error: Error) => callback(error, null),
+    )
+  },
+}
+
 // Missing keys in ru/hy fall back to English, so translations can be filled in gradually.
 i18n
+  .use(lazyLocales)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources: { en: { translation: en }, ru: { translation: ru }, hy: { translation: hy } },
+    resources: { en: { translation: en } },
+    partialBundledLanguages: true,
     supportedLngs: LANGUAGES.map((l) => l.code),
     fallbackLng: 'en',
     load: 'languageOnly',

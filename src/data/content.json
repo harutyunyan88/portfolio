@@ -1,0 +1,139 @@
+{
+  "$comment": "Single source of facts for the website (src/data/*.ts) and the CV PDF (backend/cv.py). Texts live in src/i18n/locales.",
+  "careerStart": "2020-10",
+  "contacts": [
+    { "id": "email", "value": "arsen.harutyunyan088@gmail.com", "href": "mailto:arsen.harutyunyan088@gmail.com" },
+    { "id": "phone", "value": "+374 98 82 23 29", "href": "tel:+37498822329" },
+    { "id": "telegram", "value": "@Harutyunyan_a88", "href": "https://t.me/Harutyunyan_a88" },
+    { "id": "github", "value": "github.com/harutyunyan88", "href": "https://github.com/harutyunyan88" },
+    { "id": "linkedin", "value": "linkedin.com/in/harutyunyanpy", "href": "https://www.linkedin.com/in/harutyunyanpy" }
+  ],
+  "skillGroups": [
+    {
+      "id": "frontend",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Redux / RTK Query",
+        "MobX",
+        "React Hook Form",
+        "Zod",
+        "i18next",
+        "MUI",
+        "Tailwind CSS",
+        "SCSS",
+        "Styled Components",
+        "Vite",
+        "HTML5",
+        "CSS",
+        "Bootstrap"
+      ]
+    },
+    {
+      "id": "backend",
+      "skills": ["Python", "FastAPI", "Django", "Django REST Framework", "Flask", "SQLAlchemy", "Jinja2", "Pandas"]
+    },
+    { "id": "databases", "skills": ["PostgreSQL", "MySQL", "MongoDB"] },
+    { "id": "apis", "skills": ["REST APIs", "JWT Auth", "Unit & Integration Testing"] },
+    {
+      "id": "tools",
+      "skills": ["Git", "GitHub", "GitLab", "GitHub Actions", "Docker", "Azure Static Web Apps", "Jira", "Trello", "Claude Code"]
+    }
+  ],
+  "experience": [
+    {
+      "id": "freelance",
+      "company": "Freelance Project",
+      "type": "freelance",
+      "start": "2026-05",
+      "end": "2026-08",
+      "tech": ["React.js", "TypeScript", "Vite", "MUI", "Redux Toolkit", "RTK Query", "React Hook Form", "Zod", "i18next", "Azure Static Web Apps"]
+    },
+    {
+      "id": "profit",
+      "company": "Profit Development Company",
+      "type": "fullTime",
+      "start": "2020-10",
+      "end": null,
+      "tech": ["React.js", "Redux", "MobX", "Python", "Django", "Django Ninja", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pandas", "FPDF", "JWT"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "propertyManagement",
+      "kind": "client",
+      "role": "frontend",
+      "tech": [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "Redux Toolkit",
+        "RTK Query",
+        "MUI",
+        "MUI X DataGrid",
+        "React Hook Form",
+        "Zod",
+        "React Router",
+        "i18next",
+        "Azure Static Web Apps"
+      ]
+    },
+    {
+      "id": "aiBlogGenerator",
+      "kind": "client",
+      "role": "frontend",
+      "tech": ["React 19", "MobX", "MUI", "MUI X DataGrid", "Formik", "Yup", "React Router", "Axios", "OAuth 2.0"]
+    },
+    {
+      "id": "giftsMarketplace",
+      "kind": "client",
+      "role": "fullstack",
+      "tech": [
+        "React",
+        "MobX",
+        "MUI",
+        "Formik",
+        "Google Maps API",
+        "FastAPI",
+        "PostgreSQL",
+        "PostGIS",
+        "SQLAlchemy",
+        "Celery",
+        "Redis",
+        "Stripe Connect",
+        "Firebase",
+        "Docker",
+        "GitLab CI"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "kind": "personal",
+      "role": "fullstack",
+      "tech": ["React", "TypeScript", "Tailwind CSS", "Zustand", "i18next", "FastAPI", "PostgreSQL", "Vercel"],
+      "links": { "github": "https://github.com/harutyunyan88" }
+    }
+  ],
+  "courses": [
+    {
+      "id": "python",
+      "school": "Profit Training Center",
+      "start": "2020-02",
+      "end": "2020-09",
+      "topics": ["Python", "Django REST Framework", "Flask", "React JS", "MobX"]
+    },
+    {
+      "id": "javascript",
+      "school": "BeeOnCode Training Center",
+      "start": "2019-02",
+      "end": "2019-05",
+      "topics": ["HTML", "CSS", "Bootstrap", "JavaScript"]
+    }
+  ],
+  "spokenLanguages": [
+    { "id": "hy", "level": "native" },
+    { "id": "en", "level": "professional" },
+    { "id": "ru", "level": "professional" }
+  ]
+}

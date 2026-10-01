@@ -27,7 +27,7 @@ export default function DesktopIcon({ id, selected, onSelect, onOpen }: Props) {
       onDoubleClick={onOpen}
       onKeyDown={(e) => e.key === 'Enter' && onOpen()}
       className={clsx(
-        'flex w-24 flex-col items-center gap-1.5 rounded-lg p-2 text-center outline-none select-none',
+        'flex w-28 flex-col items-center gap-1.5 rounded-lg p-2 text-center outline-none select-none',
         'focus-visible:ring-2 focus-visible:ring-accent',
         selected ? 'bg-accent-soft ring-1 ring-accent/40' : 'hover:bg-white/30 dark:hover:bg-white/10',
       )}

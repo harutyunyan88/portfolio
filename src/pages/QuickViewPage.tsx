@@ -9,13 +9,13 @@ import LanguageSwitcher from '../components/controls/LanguageSwitcher'
 import SearchButton from '../components/controls/SearchButton'
 import ThemeToggle from '../components/controls/ThemeToggle'
 import Reveal from '../components/Reveal'
-import { CV_URL } from '../lib/constants'
+import { cvUrl } from '../lib/constants'
 
 // The CV and terminal are desktop "programs"; the quick view links to the CV instead.
 const SECTIONS: AppId[] = DESKTOP_ORDER.filter((id) => id !== 'cv' && id !== 'terminal')
 
 const scrollToSection = (id: AppId) => {
-  if (id === 'cv') window.open(CV_URL, '_blank')
+  if (id === 'cv') window.open(cvUrl({ inline: true }), '_blank')
   else document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }
 
@@ -43,7 +43,7 @@ export default function QuickViewPage() {
               <LanguageSwitcher />
               <ThemeToggle />
               <a
-                href={CV_URL}
+                href={cvUrl()}
                 download
                 aria-label={t('cv.download')}
                 title={t('cv.download')}

@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { LazyMotion, MotionConfig } from 'motion/react'
 import { lazy, Suspense, useEffect } from 'react'
 import { usePathname } from './lib/router'
@@ -12,6 +13,7 @@ const loadMotionFeatures = () => import('./lib/motionFeatures').then((m) => m.de
 export default function App() {
   const theme = useThemeStore((s) => s.theme)
   const pathname = usePathname()
+  const isQuickView = pathname === '/quick'
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark')
@@ -21,9 +23,11 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <LazyMotion features={loadMotionFeatures} strict>
         <Suspense fallback={<div className="wallpaper h-full" />}>
-          {pathname === '/quick' ? <QuickViewPage /> : <DesktopPage />}
+          {isQuickView ? <QuickViewPage /> : <DesktopPage />}
         </Suspense>
       </LazyMotion>
+      {/* Vercel Web Analytics: cookie-free page views. Pages are reported explicitly since we use our own router. */}
+      <Analytics route={isQuickView ? '/quick' : '/'} path={pathname} />
     </MotionConfig>
   )
 }
