@@ -1,0 +1,245 @@
+{
+  "profile": {
+    "name": "Arsen Harutyunyan",
+    "role": "Full Stack Developer",
+    "location": "Yerevan, Armenia"
+  },
+  "apps": {
+    "about": "About Me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "interests": "Interests",
+    "contact": "Contact",
+    "cv": "CV.pdf",
+    "terminal": "Terminal"
+  },
+  "common": {
+    "comingSoon": "This section is being built and will be available soon.",
+    "quickView": "Quick view",
+    "quickViewHint": "For recruiters: everything on one page",
+    "backToDesktop": "Back to desktop",
+    "back": "Back",
+    "present": "Present"
+  },
+  "desktop": {
+    "hint": "Double-click an icon to open it"
+  },
+  "window": {
+    "minimize": "Minimize",
+    "maximize": "Maximize",
+    "restore": "Restore",
+    "close": "Close"
+  },
+  "taskbar": {
+    "start": "Start",
+    "allApps": "All apps",
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode",
+    "language": "Language"
+  },
+  "cv": {
+    "open": "Open in new tab",
+    "download": "Download CV"
+  },
+  "about": {
+    "greeting": "Hi, I'm Arsen 👋",
+    "bio": [
+      "I'm a Full Stack Developer from Yerevan with {{years}}+ years of experience building production web applications with Python (Django, FastAPI) and React with TypeScript.",
+      "I enjoy the whole journey of a feature: designing the API and database, securing it with JWT and role-based access, and turning it into a fast, accessible interface. Lately I've been building large SPAs with Redux Toolkit, RTK Query, React Hook Form and Zod.",
+      "I'm open to new opportunities where I can take ownership of features end to end, work with a strong team, and keep growing."
+    ],
+    "facts": {
+      "experience": "Experience",
+      "experienceValue": "{{years}}+ years",
+      "location": "Based in",
+      "focus": "Focus",
+      "focusValue": "Python + React",
+      "languages": "Languages",
+      "languagesValue": "HY · EN · RU"
+    },
+    "contactMe": "Contact me"
+  },
+  "skills": {
+    "intro": "Technologies I use to design, build and ship web applications.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "apis": "APIs & Testing",
+      "tools": "Tools & DevOps"
+    }
+  },
+  "experience": {
+    "types": {
+      "fullTime": "Full-time",
+      "freelance": "Freelance"
+    },
+    "items": {
+      "profit": {
+        "role": "Full Stack Developer",
+        "location": "Yerevan, Armenia",
+        "bullets": [
+          "Developed full-stack applications with React.js, Redux/MobX, Python (Django, FastAPI), PostgreSQL and SQLAlchemy.",
+          "Implemented role-based access control and JWT authentication with access and refresh tokens.",
+          "Built REST APIs with Django Ninja and integrated frontend applications with backend services and databases.",
+          "Processed CSV data with Pandas and generated automated PDF reports using FPDF.",
+          "Wrote unit and integration tests for business logic, APIs and application workflows.",
+          "Used Claude Code for AI-assisted research, debugging and refactoring."
+        ]
+      },
+      "freelance": {
+        "role": "Front End Developer",
+        "location": "Remote",
+        "bullets": [
+          "Developed and maintained a large-scale property management SPA with React.js, TypeScript, Vite and MUI.",
+          "Built reusable UI components, data tables, forms and a feature-based architecture across multiple business modules.",
+          "Integrated REST APIs with Redux Toolkit and RTK Query, including caching, invalidation, authentication and automatic token refresh.",
+          "Implemented role-based access control, protected routes, a bilingual English/French UI and responsive layouts.",
+          "Built configuration-driven forms with React Hook Form and Zod, including validation, error handling and data workflows.",
+          "Contributed to deployment and delivery with Git/GitHub and Azure Static Web Apps."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "intro": "A selection of things I've built. More coming soon.",
+    "kinds": {
+      "client": "Client project",
+      "personal": "Personal project"
+    },
+    "private": "Private client code, available to discuss in an interview",
+    "code": "Code",
+    "live": "Live",
+    "items": {
+      "propertyManagement": {
+        "title": "Property Management Platform",
+        "description": "A large single-page application for managing properties across several business modules, built for a client as a freelance project.",
+        "highlights": [
+          "Feature-based architecture with reusable tables, forms and UI components",
+          "RTK Query data layer with caching, invalidation and automatic token refresh",
+          "Role-based access, protected routes and a bilingual English/French UI"
+        ]
+      },
+      "portfolio": {
+        "title": "This Portfolio — a Desktop OS in the Browser",
+        "description": "The site you're looking at: a desktop-style portfolio with draggable windows, a terminal and a quick view for recruiters, backed by a FastAPI API.",
+        "highlights": [
+          "Window manager with drag, resize, focus and minimize built on Zustand and react-rnd",
+          "Three languages (EN/RU/HY), light and dark themes, mobile home-screen layout",
+          "Contact form with validation on both ends, stored in PostgreSQL and delivered by email"
+        ]
+      }
+    }
+  },
+  "education": {
+    "coursesTitle": "Courses",
+    "languagesTitle": "Languages",
+    "items": {
+      "python": {
+        "title": "Python Course",
+        "description": "Backend development with Python and Django REST Framework, plus Flask and React with MobX."
+      },
+      "javascript": {
+        "title": "JavaScript Course",
+        "description": "Web fundamentals: HTML, CSS, Bootstrap and JavaScript."
+      }
+    },
+    "spoken": {
+      "hy": "Armenian",
+      "en": "English",
+      "ru": "Russian"
+    },
+    "levels": {
+      "native": "Native or bilingual",
+      "professional": "Professional working proficiency"
+    }
+  },
+  "interests": {
+    "intro": "What I do when I'm not coding.",
+    "items": {
+      "football": {
+        "title": "Football",
+        "description": "Playing with friends and following the big matches."
+      },
+      "gaming": {
+        "title": "Gaming",
+        "description": "Games are part of why this portfolio looks like a desktop."
+      },
+      "ai": {
+        "title": "AI",
+        "description": "Exploring AI tools and how they change the way we build software."
+      },
+      "movies": {
+        "title": "Movies",
+        "description": "A good film is my favourite way to end the week."
+      },
+      "music": {
+        "title": "Music",
+        "description": "Always something playing while I work."
+      },
+      "cooking": {
+        "title": "Cooking",
+        "description": "Trying new recipes, Armenian classics included."
+      },
+      "travel": {
+        "title": "Traveling",
+        "description": "Discovering new places, cultures and food."
+      }
+    }
+  },
+  "contact": {
+    "intro": "Have a role, a project or a question? Send me a message, or reach me directly.",
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "telegram": "Telegram",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "form": {
+      "title": "Send a message",
+      "name": "Your name",
+      "email": "Your email",
+      "subject": "Subject",
+      "subjectOptional": "optional",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks! Your message has been sent. I'll get back to you soon.",
+      "error": "Sorry, the message couldn't be sent. Please email me directly at {{email}}.",
+      "rateLimited": "You've sent several messages already. Please try again in an hour, or email me at {{email}}.",
+      "sendAnother": "Send another message"
+    },
+    "validation": {
+      "nameRequired": "Please enter your name",
+      "emailInvalid": "Please enter a valid email",
+      "messageShort": "Please write at least 10 characters",
+      "tooLong": "This is too long"
+    }
+  },
+  "terminal": {
+    "welcome": "Welcome to ArsenOS. Type 'help' to see available commands.",
+    "notFound": "command not found: {{cmd}}. Type 'help' for the list of commands.",
+    "help": {
+      "help": "show this list",
+      "about": "who I am",
+      "skills": "my tech stack",
+      "experience": "where I've worked",
+      "projects": "things I've built",
+      "contact": "how to reach me",
+      "cv": "download my CV",
+      "open": "open an app, e.g. 'open projects'",
+      "theme": "switch light/dark mode",
+      "lang": "change language: lang en | ru | hy",
+      "clear": "clear the screen"
+    },
+    "opening": "Opening {{app}}…",
+    "openUsage": "usage: open <app>. Apps: {{apps}}",
+    "langUsage": "usage: lang en | ru | hy",
+    "themeSwitched": "Theme switched to {{theme}}.",
+    "downloading": "Downloading CV…",
+    "sudo": "Nice try 😄 You don't have root access here, but you can contact me."
+  }
+}

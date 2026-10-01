@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Colour tokens. Components use the Tailwind names below (bg-surface, text-muted, …). */
+:root {
+  --bg: #eef1f7;
+  --surface: rgb(255 255 255 / 0.82);
+  --surface-solid: #ffffff;
+  --surface-2: #f2f4f9;
+  --border: rgb(15 23 42 / 0.1);
+  --text: #0f172a;
+  --muted: #5b6477;
+  --accent: #4f46e5;
+  --accent-soft: rgb(79 70 229 / 0.12);
+  --taskbar: rgb(255 255 255 / 0.7);
+  --wallpaper:
+    radial-gradient(at 12% 18%, #c7d2fe 0, transparent 45%),
+    radial-gradient(at 88% 12%, #fbcfe8 0, transparent 40%),
+    radial-gradient(at 70% 85%, #a5f3fc 0, transparent 45%),
+    radial-gradient(at 20% 90%, #ddd6fe 0, transparent 40%),
+    #eef1f7;
+}
+
+.dark {
+  --bg: #0b1020;
+  --surface: rgb(17 24 39 / 0.82);
+  --surface-solid: #111827;
+  --surface-2: #1a2235;
+  --border: rgb(255 255 255 / 0.1);
+  --text: #e5e9f2;
+  --muted: #94a0b8;
+  --accent: #818cf8;
+  --accent-soft: rgb(129 140 248 / 0.16);
+  --taskbar: rgb(10 14 28 / 0.72);
+  --wallpaper:
+    radial-gradient(at 12% 18%, #312e81 0, transparent 45%),
+    radial-gradient(at 88% 12%, #831843 0, transparent 38%),
+    radial-gradient(at 70% 85%, #164e63 0, transparent 45%),
+    radial-gradient(at 20% 90%, #4c1d95 0, transparent 40%),
+    #0b1020;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-solid: var(--surface-solid);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-taskbar: var(--taskbar);
+
+  --font-sans: 'Inter Variable', 'Noto Sans Armenian', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wallpaper {
+  background: var(--wallpaper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

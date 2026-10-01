@@ -1,0 +1,5 @@
+# Not needed in the deployment (Vercel deploys from git, so .env/.venv/node_modules are already excluded).
+backend/tests
+requirements-dev.txt
+scripts
+.env.example
