@@ -24,7 +24,7 @@ export default function ProjectsApp() {
               <div className={clsx('relative grid h-32 place-items-center bg-gradient-to-br', project.gradient)}>
                 <Icon className="size-12 text-white/90 drop-shadow" aria-hidden />
                 <Tag className="absolute top-3 left-3 bg-black/25 text-white backdrop-blur">
-                  {t(`projects.kinds.${project.kind}`)}
+                  {t(`projects.kinds.${project.kind}`)} · {t(`projects.roles.${project.role}`)}
                 </Tag>
               </div>
               <div className="flex flex-1 flex-col gap-3 p-5">

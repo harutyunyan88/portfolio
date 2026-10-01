@@ -25,6 +25,10 @@ class Settings(BaseSettings):
     # Max messages from one IP per hour.
     rate_limit_per_hour: int = 3
 
+    # Address printed on the CV. Empty means: Vercel's production domain, or else the address of the request.
+    site_url: str = ""
+    vercel_project_production_url: str = ""
+
     @property
     def email_enabled(self) -> bool:
         return bool(self.smtp_user and self.smtp_password)

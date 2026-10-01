@@ -1,274 +1,304 @@
 {
   "profile": {
-    "name": "Arsen Harutyunyan",
-    "role": "Full Stack Developer",
-    "location": "Yerevan, Armenia"
+    "name": "Арсен Арутюнян",
+    "role": "Full Stack разработчик",
+    "location": "Ереван, Армения"
   },
   "apps": {
-    "about": "About Me",
-    "projects": "Projects",
-    "skills": "Skills",
-    "experience": "Experience",
-    "education": "Education",
-    "interests": "Interests",
-    "contact": "Contact",
+    "about": "Обо мне",
+    "projects": "Проекты",
+    "skills": "Навыки",
+    "experience": "Опыт работы",
+    "education": "Образование",
+    "interests": "Интересы",
+    "contact": "Контакты",
     "cv": "CV.pdf",
-    "terminal": "Terminal"
+    "terminal": "Терминал"
   },
   "common": {
-    "comingSoon": "This section is being built and will be available soon.",
-    "quickView": "Quick view",
-    "quickViewHint": "For recruiters: everything on one page",
-    "backToDesktop": "Back to desktop",
-    "back": "Back",
-    "present": "Present"
+    "comingSoon": "Этот раздел ещё в работе и скоро появится.",
+    "quickView": "Быстрый просмотр",
+    "quickViewHint": "Для рекрутеров: всё на одной странице",
+    "backToDesktop": "Назад на рабочий стол",
+    "back": "Назад",
+    "present": "По настоящее время"
   },
   "desktop": {
-    "hint": "Double-click an icon to open it"
+    "hint": "Дважды щёлкните по иконке, чтобы открыть"
   },
   "window": {
-    "minimize": "Minimize",
-    "maximize": "Maximize",
-    "restore": "Restore",
-    "close": "Close"
+    "minimize": "Свернуть",
+    "maximize": "Развернуть",
+    "restore": "Восстановить",
+    "close": "Закрыть"
   },
   "taskbar": {
-    "start": "Start",
-    "allApps": "All apps",
-    "switchToDark": "Switch to dark mode",
-    "switchToLight": "Switch to light mode",
-    "language": "Language"
+    "start": "Пуск",
+    "allApps": "Все приложения",
+    "switchToDark": "Включить тёмную тему",
+    "switchToLight": "Включить светлую тему",
+    "language": "Язык"
   },
   "cv": {
-    "open": "Open in new tab",
-    "download": "Download CV"
+    "open": "Открыть в новой вкладке",
+    "download": "Скачать CV",
+    "pdf": {
+      "summary": "Обо мне",
+      "portfolio": "Портфолио",
+      "footer": "Создано на сайте моего портфолио"
+    }
   },
   "boot": {
-    "label": "Starting ArsenOS",
-    "skip": "Click or press any key to skip",
+    "label": "ArsenOS запускается",
+    "skip": "Нажмите на экран или любую клавишу, чтобы пропустить",
     "steps": [
-      "Loading skills…",
-      "Compiling experience…",
-      "Mounting projects…",
-      "Starting desktop…"
+      "Загружаем навыки…",
+      "Собираем опыт…",
+      "Подключаем проекты…",
+      "Запускаем рабочий стол…"
     ]
   },
   "palette": {
-    "title": "Command menu",
-    "open": "Open command menu",
-    "searchHint": "Search or jump to…",
-    "placeholder": "Type a command or search…",
-    "noResults": "No results",
-    "copyEmail": "Copy email address",
-    "copied": "Copied!",
+    "title": "Меню команд",
+    "open": "Открыть меню команд",
+    "searchHint": "Поиск или переход…",
+    "placeholder": "Введите команду или поиск…",
+    "noResults": "Ничего не найдено",
+    "copyEmail": "Скопировать email",
+    "copied": "Скопировано!",
     "groups": {
-      "apps": "Apps",
-      "actions": "Actions",
-      "links": "Contact & links"
+      "apps": "Приложения",
+      "actions": "Действия",
+      "links": "Контакты и ссылки"
     },
     "hints": {
-      "navigate": "navigate",
-      "select": "select",
-      "close": "close"
+      "navigate": "навигация",
+      "select": "выбрать",
+      "close": "закрыть"
     }
   },
   "about": {
-    "greeting": "Hi, I'm Arsen 👋",
+    "greeting": "Привет, я Арсен 👋",
     "bio": [
-      "I'm a Full Stack Developer from Yerevan with {{years}}+ years of experience building production web applications with Python (Django, FastAPI) and React with TypeScript.",
-      "I enjoy the whole journey of a feature: designing the API and database, securing it with JWT and role-based access, and turning it into a fast, accessible interface. Lately I've been building large SPAs with Redux Toolkit, RTK Query, React Hook Form and Zod.",
-      "I'm open to new opportunities where I can take ownership of features end to end, work with a strong team, and keep growing."
+      "Я Full Stack разработчик из Еревана, у меня {{years}}+ лет опыта. Делаю реальные веб-приложения на Python (Django, FastAPI) и React с TypeScript.",
+      "Мне нравится вести фичу от начала до конца: спроектировать API и базу данных, защитить всё через JWT и роли, а потом сделать быстрый и удобный интерфейс. Последнее время делаю большие SPA на Redux Toolkit, RTK Query, React Hook Form и Zod.",
+      "Открыт к новым предложениям, где смогу полностью отвечать за свою часть работы, работать в сильной команде и дальше расти."
     ],
     "facts": {
-      "experience": "Experience",
-      "experienceValue": "{{years}}+ years",
-      "location": "Based in",
-      "focus": "Focus",
+      "experience": "Опыт",
+      "experienceValue": "{{years}}+ лет",
+      "location": "Живу в",
+      "focus": "Основной стек",
       "focusValue": "Python + React",
-      "languages": "Languages",
+      "languages": "Языки",
       "languagesValue": "HY · EN · RU"
     },
-    "contactMe": "Contact me"
+    "contactMe": "Написать мне"
   },
   "skills": {
-    "intro": "Technologies I use to design, build and ship web applications.",
+    "intro": "Технологии, с которыми я проектирую, разрабатываю и запускаю веб-приложения.",
     "groups": {
       "frontend": "Frontend",
       "backend": "Backend",
-      "databases": "Databases",
-      "apis": "APIs & Testing",
-      "tools": "Tools & DevOps"
+      "databases": "Базы данных",
+      "apis": "API и тестирование",
+      "tools": "Инструменты и DevOps"
     }
   },
   "experience": {
     "types": {
-      "fullTime": "Full-time",
-      "freelance": "Freelance"
+      "fullTime": "Полная занятость",
+      "freelance": "Фриланс"
     },
     "items": {
       "profit": {
-        "role": "Full Stack Developer",
-        "location": "Yerevan, Armenia",
+        "role": "Full Stack разработчик",
+        "location": "Ереван, Армения",
         "bullets": [
-          "Developed full-stack applications with React.js, Redux/MobX, Python (Django, FastAPI), PostgreSQL and SQLAlchemy.",
-          "Implemented role-based access control and JWT authentication with access and refresh tokens.",
-          "Built REST APIs with Django Ninja and integrated frontend applications with backend services and databases.",
-          "Processed CSV data with Pandas and generated automated PDF reports using FPDF.",
-          "Wrote unit and integration tests for business logic, APIs and application workflows.",
-          "Used Claude Code for AI-assisted research, debugging and refactoring."
+          "Разрабатывал full-stack приложения на React.js, Redux/MobX, Python (Django, FastAPI), PostgreSQL и SQLAlchemy.",
+          "Сделал управление доступом по ролям и JWT-аутентификацию с access и refresh токенами.",
+          "Писал REST API на Django Ninja и связывал фронтенд с бэкенд-сервисами и базами данных.",
+          "Обрабатывал CSV-данные с помощью Pandas и генерировал автоматические PDF-отчёты через FPDF.",
+          "Писал unit- и интеграционные тесты для бизнес-логики, API и рабочих процессов.",
+          "Использовал Claude Code для исследований, отладки и рефакторинга с помощью ИИ."
         ]
       },
       "freelance": {
-        "role": "Front End Developer",
-        "location": "Remote",
+        "role": "Front End разработчик",
+        "location": "Удалённо",
         "bullets": [
-          "Developed and maintained a large-scale property management SPA with React.js, TypeScript, Vite and MUI.",
-          "Built reusable UI components, data tables, forms and a feature-based architecture across multiple business modules.",
-          "Integrated REST APIs with Redux Toolkit and RTK Query, including caching, invalidation, authentication and automatic token refresh.",
-          "Implemented role-based access control, protected routes, a bilingual English/French UI and responsive layouts.",
-          "Built configuration-driven forms with React Hook Form and Zod, including validation, error handling and data workflows.",
-          "Contributed to deployment and delivery with Git/GitHub and Azure Static Web Apps."
+          "Разрабатывал и поддерживал большое SPA для управления недвижимостью на React.js, TypeScript, Vite и MUI.",
+          "Создавал переиспользуемые UI-компоненты, таблицы, формы и feature-based архитектуру для нескольких бизнес-модулей.",
+          "Интегрировал REST API через Redux Toolkit и RTK Query: кэширование, инвалидация, аутентификация и автоматическое обновление токена.",
+          "Сделал доступ по ролям, защищённые роуты, двуязычный интерфейс (английский/французский) и адаптивную вёрстку.",
+          "Делал формы на основе конфигурации с React Hook Form и Zod: валидация, обработка ошибок и работа с данными.",
+          "Участвовал в деплое и релизах через Git/GitHub и Azure Static Web Apps."
         ]
       }
     }
   },
   "projects": {
-    "intro": "A selection of things I've built. More coming soon.",
+    "intro": "Несколько моих работ. Скоро будет больше.",
     "kinds": {
-      "client": "Client project",
-      "personal": "Personal project"
+      "client": "Проект для клиента",
+      "personal": "Личный проект"
     },
-    "private": "Private client code, available to discuss in an interview",
-    "code": "Code",
-    "live": "Live",
+    "roles": {
+      "frontend": "Frontend",
+      "fullstack": "Full stack"
+    },
+    "private": "Закрытый код клиента, могу рассказать на собеседовании",
+    "code": "Код",
+    "live": "Открыть",
     "items": {
       "propertyManagement": {
-        "title": "Property Management Platform",
-        "description": "A large single-page application for managing properties across several business modules, built for a client as a freelance project.",
+        "title": "Платформа управления недвижимостью",
+        "description": "Большое одностраничное приложение для управления недвижимостью с несколькими бизнес-модулями. Делал для клиента как фриланс-проект.",
         "highlights": [
-          "Feature-based architecture with reusable tables, forms and UI components",
-          "RTK Query data layer with caching, invalidation and automatic token refresh",
-          "Role-based access, protected routes and a bilingual English/French UI"
+          "Syndicate, management and accounting modules: buildings and units, suppliers, disputes, service requests, budgets, journals, expenses, collections and bank reconciliations",
+          "RTK Query data layer with ~180 typed endpoints, tag-based cache invalidation and silent JWT refresh-and-retry",
+          "Config-driven forms with React Hook Form and Zod, plus a generic DataGrid table with server-side pagination and filtering",
+          "Role-based access, unsaved-changes guard, custom MUI theme, deployed to Azure Static Web Apps"
+        ]
+      },
+      "aiBlogGenerator": {
+        "title": "AI Blog Generator — Management Dashboard",
+        "description": "An admin dashboard for an AI pipeline that writes SEO blog posts for many marketing funnels and publishes them to GoHighLevel. I built the frontend that configures each funnel and reviews the generated posts.",
+        "highlights": [
+          "Funnel management: per-funnel OpenAI, Shutterstock and scraped-data settings, plus publishing schedules with time windows and rate limits",
+          "OAuth 2.0 connection flows for GoHighLevel and Google Search Console",
+          "Generate a post, edit its HTML in place and publish it to the client's blog in one screen",
+          "MobX stores, protected routes, Formik + Yup forms and an in-app issue reporter"
+        ]
+      },
+      "giftsMarketplace": {
+        "title": "Local Gifts Marketplace & Franchise Platform",
+        "description": "A gift-card marketplace where shoppers buy gifts from nearby merchants in a mobile app, run by a franchise network. I worked full stack: the FastAPI backend and the React back office for super users, franchisees, sub-franchisees and merchants.",
+        "highlights": [
+          "Franchise territories drawn as polygons on Google Maps and matched to merchants with PostGIS geo queries",
+          "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
+          "Celery + Redis jobs for mass email, Firebase push notifications and expiring gifts and promos",
+          "Dockerized stack (Nginx, PostgreSQL, Redis, Celery, Flower) deployed through GitLab CI"
         ]
       },
       "portfolio": {
-        "title": "This Portfolio — a Desktop OS in the Browser",
-        "description": "The site you're looking at: a desktop-style portfolio with draggable windows, a terminal and a quick view for recruiters, backed by a FastAPI API.",
+        "title": "Это портфолио — рабочий стол прямо в браузере",
+        "description": "Сайт, который вы сейчас смотрите: портфолио в виде рабочего стола с окнами, терминалом и быстрым просмотром для рекрутеров. Бэкенд на FastAPI.",
         "highlights": [
-          "Window manager with drag, resize, focus and minimize built on Zustand and react-rnd",
-          "Three languages (EN/RU/HY), light and dark themes, mobile home-screen layout",
-          "Contact form with validation on both ends, stored in PostgreSQL and delivered by email"
+          "Оконный менеджер: перетаскивание, изменение размера, фокус и сворачивание на Zustand и react-rnd",
+          "Три языка (EN/RU/HY), светлая и тёмная темы, отдельный вид для телефона",
+          "Форма обратной связи с валидацией на фронте и бэке, сообщения хранятся в PostgreSQL и приходят на почту"
         ]
       }
     }
   },
   "education": {
-    "coursesTitle": "Courses",
-    "languagesTitle": "Languages",
+    "coursesTitle": "Курсы",
+    "languagesTitle": "Языки",
     "items": {
       "python": {
-        "title": "Python Course",
-        "description": "Backend development with Python and Django REST Framework, plus Flask and React with MobX."
+        "title": "Курс Python",
+        "description": "Бэкенд-разработка на Python и Django REST Framework, а также Flask и React с MobX."
       },
       "javascript": {
-        "title": "JavaScript Course",
-        "description": "Web fundamentals: HTML, CSS, Bootstrap and JavaScript."
+        "title": "Курс JavaScript",
+        "description": "Основы веба: HTML, CSS, Bootstrap и JavaScript."
       }
     },
     "spoken": {
-      "hy": "Armenian",
-      "en": "English",
-      "ru": "Russian"
+      "hy": "Армянский",
+      "en": "Английский",
+      "ru": "Русский"
     },
     "levels": {
-      "native": "Native or bilingual",
-      "professional": "Professional working proficiency"
+      "native": "Родной",
+      "professional": "Рабочий уровень"
     }
   },
   "interests": {
-    "intro": "What I do when I'm not coding.",
+    "intro": "Чем я занимаюсь, когда не пишу код.",
     "items": {
       "football": {
-        "title": "Football",
-        "description": "Playing with friends and following the big matches."
+        "title": "Футбол",
+        "description": "Играю с друзьями и смотрю большие матчи."
       },
       "gaming": {
-        "title": "Gaming",
-        "description": "Games are part of why this portfolio looks like a desktop."
+        "title": "Игры",
+        "description": "Отчасти из-за игр это портфолио и выглядит как рабочий стол."
       },
       "ai": {
-        "title": "AI",
-        "description": "Exploring AI tools and how they change the way we build software."
+        "title": "ИИ",
+        "description": "Пробую ИИ-инструменты и смотрю, как они меняют разработку."
       },
       "movies": {
-        "title": "Movies",
-        "description": "A good film is my favourite way to end the week."
+        "title": "Кино",
+        "description": "Хороший фильм — мой любимый способ закончить неделю."
       },
       "music": {
-        "title": "Music",
-        "description": "Always something playing while I work."
+        "title": "Музыка",
+        "description": "Во время работы у меня всегда что-то играет."
       },
       "cooking": {
-        "title": "Cooking",
-        "description": "Trying new recipes, Armenian classics included."
+        "title": "Кулинария",
+        "description": "Пробую новые рецепты, в том числе армянскую классику."
       },
       "travel": {
-        "title": "Traveling",
-        "description": "Discovering new places, cultures and food."
+        "title": "Путешествия",
+        "description": "Открываю новые места, культуры и кухни."
       }
     }
   },
   "contact": {
-    "intro": "Have a role, a project or a question? Send me a message, or reach me directly.",
+    "intro": "Есть вакансия, проект или вопрос? Напишите мне или свяжитесь напрямую.",
     "labels": {
       "email": "Email",
-      "phone": "Phone",
+      "phone": "Телефон",
       "telegram": "Telegram",
       "github": "GitHub",
       "linkedin": "LinkedIn"
     },
     "form": {
-      "title": "Send a message",
-      "name": "Your name",
-      "email": "Your email",
-      "subject": "Subject",
-      "subjectOptional": "optional",
-      "message": "Message",
-      "submit": "Send message",
-      "sending": "Sending…",
-      "success": "Thanks! Your message has been sent. I'll get back to you soon.",
-      "error": "Sorry, the message couldn't be sent. Please email me directly at {{email}}.",
-      "rateLimited": "You've sent several messages already. Please try again in an hour, or email me at {{email}}.",
-      "sendAnother": "Send another message"
+      "title": "Написать сообщение",
+      "name": "Ваше имя",
+      "email": "Ваш email",
+      "subject": "Тема",
+      "subjectOptional": "необязательно",
+      "message": "Сообщение",
+      "submit": "Отправить",
+      "sending": "Отправляем…",
+      "success": "Спасибо! Сообщение отправлено, скоро отвечу.",
+      "error": "Не получилось отправить сообщение. Напишите мне напрямую на {{email}}.",
+      "rateLimited": "Вы уже отправили несколько сообщений. Попробуйте через час или напишите на {{email}}.",
+      "sendAnother": "Отправить ещё одно"
     },
     "validation": {
-      "nameRequired": "Please enter your name",
-      "emailInvalid": "Please enter a valid email",
-      "messageShort": "Please write at least 10 characters",
-      "tooLong": "This is too long"
+      "nameRequired": "Укажите ваше имя",
+      "emailInvalid": "Укажите правильный email",
+      "messageShort": "Напишите хотя бы 10 символов",
+      "tooLong": "Слишком длинно"
     }
   },
   "terminal": {
-    "welcome": "Welcome to ArsenOS. Type 'help' to see available commands.",
-    "notFound": "command not found: {{cmd}}. Type 'help' for the list of commands.",
+    "welcome": "Добро пожаловать в ArsenOS. Введите 'help', чтобы увидеть команды.",
+    "notFound": "команда не найдена: {{cmd}}. Введите 'help', чтобы увидеть список команд.",
     "help": {
-      "help": "show this list",
-      "about": "who I am",
-      "skills": "my tech stack",
-      "experience": "where I've worked",
-      "projects": "things I've built",
-      "contact": "how to reach me",
-      "cv": "download my CV",
-      "open": "open an app, e.g. 'open projects'",
-      "theme": "switch light/dark mode",
-      "lang": "change language: lang en | ru | hy",
-      "clear": "clear the screen"
+      "help": "показать этот список",
+      "about": "кто я",
+      "skills": "мой стек",
+      "experience": "где я работал",
+      "projects": "что я сделал",
+      "contact": "как со мной связаться",
+      "cv": "скачать моё CV",
+      "open": "открыть приложение, например 'open projects'",
+      "theme": "переключить светлую/тёмную тему",
+      "lang": "сменить язык: lang en | ru | hy",
+      "clear": "очистить экран"
     },
-    "opening": "Opening {{app}}…",
-    "openUsage": "usage: open <app>. Apps: {{apps}}",
-    "langUsage": "usage: lang en | ru | hy",
-    "themeSwitched": "Theme switched to {{theme}}.",
-    "downloading": "Downloading CV…",
-    "sudo": "Nice try 😄 You don't have root access here, but you can contact me."
+    "opening": "Открываю {{app}}…",
+    "openUsage": "использование: open <app>. Приложения: {{apps}}",
+    "langUsage": "использование: lang en | ru | hy",
+    "themeSwitched": "Тема переключена: {{theme}}.",
+    "downloading": "Скачиваю CV…",
+    "sudo": "Хорошая попытка 😄 Root-доступа тут нет, но можно написать мне."
   }
 }

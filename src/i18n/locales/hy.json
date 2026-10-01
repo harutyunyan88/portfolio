@@ -1,274 +1,304 @@
 {
   "profile": {
-    "name": "Arsen Harutyunyan",
-    "role": "Full Stack Developer",
-    "location": "Yerevan, Armenia"
+    "name": "Արսեն Հարությունյան",
+    "role": "Full Stack ծրագրավորող",
+    "location": "Երևան, Հայաստան"
   },
   "apps": {
     "about": "Իմ Մասին",
-    "projects": "Projects",
-    "skills": "Skills",
-    "experience": "Experience",
-    "education": "Education",
-    "interests": "Interests",
-    "contact": "Contact",
+    "projects": "Նախագծեր",
+    "skills": "Հմտություններ",
+    "experience": "Աշխատանքային փորձ",
+    "education": "Կրթություն",
+    "interests": "Հոբբիներ",
+    "contact": "Կապ",
     "cv": "CV.pdf",
-    "terminal": "Terminal"
+    "terminal": "Տերմինալ"
   },
   "common": {
-    "comingSoon": "This section is being built and will be available soon.",
-    "quickView": "Quick view",
-    "quickViewHint": "For recruiters: everything on one page",
-    "backToDesktop": "Back to desktop",
-    "back": "Back",
-    "present": "Present"
+    "comingSoon": "Այս բաժինը դեռ պատրաստվում է, շուտով կլինի։",
+    "quickView": "Արագ դիտում",
+    "quickViewHint": "Ռեկրուտերների համար՝ ամեն ինչ մեկ էջում",
+    "backToDesktop": "Վերադառնալ աշխատասեղան",
+    "back": "Հետ",
+    "present": "Մինչ օրս"
   },
   "desktop": {
-    "hint": "Double-click an icon to open it"
+    "hint": "Կրկնակի սեղմեք պատկերակի վրա՝ բացելու համար"
   },
   "window": {
-    "minimize": "Minimize",
-    "maximize": "Maximize",
-    "restore": "Restore",
-    "close": "Close"
+    "minimize": "Փոքրացնել",
+    "maximize": "Մեծացնել",
+    "restore": "Վերականգնել",
+    "close": "Փակել"
   },
   "taskbar": {
-    "start": "Start",
-    "allApps": "All apps",
-    "switchToDark": "Switch to dark mode",
-    "switchToLight": "Switch to light mode",
-    "language": "Language"
+    "start": "Մենյու",
+    "allApps": "Բոլոր հավելվածները",
+    "switchToDark": "Միացնել մութ ռեժիմը",
+    "switchToLight": "Միացնել լուսավոր ռեժիմը",
+    "language": "Լեզու"
   },
   "cv": {
-    "open": "Open in new tab",
-    "download": "Download CV"
+    "open": "Բացել նոր պատուհանում",
+    "download": "Ներբեռնել CV-ն",
+    "pdf": {
+      "summary": "Իմ մասին",
+      "portfolio": "Պորտֆոլիո",
+      "footer": "Ստեղծված է իմ պորտֆոլիո կայքից"
+    }
   },
   "boot": {
-    "label": "Starting ArsenOS",
-    "skip": "Click or press any key to skip",
+    "label": "ArsenOS-ը միանում է",
+    "skip": "Սեղմեք էկրանին կամ ցանկացած ստեղն՝ բաց թողնելու համար",
     "steps": [
-      "Loading skills…",
-      "Compiling experience…",
-      "Mounting projects…",
-      "Starting desktop…"
+      "Բեռնում ենք հմտությունները…",
+      "Հավաքում ենք փորձը…",
+      "Միացնում ենք նախագծերը…",
+      "Բացում ենք աշխատասեղանը…"
     ]
   },
   "palette": {
-    "title": "Command menu",
-    "open": "Open command menu",
-    "searchHint": "Search or jump to…",
-    "placeholder": "Type a command or search…",
-    "noResults": "No results",
-    "copyEmail": "Copy email address",
-    "copied": "Copied!",
+    "title": "Հրամանների մենյու",
+    "open": "Բացել հրամանների մենյուն",
+    "searchHint": "Որոնել կամ անցնել…",
+    "placeholder": "Գրեք հրաման կամ որոնեք…",
+    "noResults": "Ոչինչ չգտնվեց",
+    "copyEmail": "Պատճենել email-ը",
+    "copied": "Պատճենվեց!",
     "groups": {
-      "apps": "Apps",
-      "actions": "Actions",
-      "links": "Contact & links"
+      "apps": "Հավելվածներ",
+      "actions": "Գործողություններ",
+      "links": "Կապ և հղումներ"
     },
     "hints": {
-      "navigate": "navigate",
-      "select": "select",
-      "close": "close"
+      "navigate": "տեղաշարժ",
+      "select": "ընտրել",
+      "close": "փակել"
     }
   },
   "about": {
-    "greeting": "Hi, I'm Arsen 👋",
+    "greeting": "Բարև, ես Արսենն եմ 👋",
     "bio": [
-      "I'm a Full Stack Developer from Yerevan with {{years}}+ years of experience building production web applications with Python (Django, FastAPI) and React with TypeScript.",
-      "I enjoy the whole journey of a feature: designing the API and database, securing it with JWT and role-based access, and turning it into a fast, accessible interface. Lately I've been building large SPAs with Redux Toolkit, RTK Query, React Hook Form and Zod.",
-      "I'm open to new opportunities where I can take ownership of features end to end, work with a strong team, and keep growing."
+      "Ես Full Stack ծրագրավորող եմ Երևանից, ունեմ {{years}}+ տարվա փորձ։ Ստեղծում եմ իրական վեբ հավելվածներ Python-ով (Django, FastAPI) և React-ով՝ TypeScript-ով։",
+      "Սիրում եմ ֆունկցիոնալի վրա աշխատել սկզբից մինչև վերջ՝ API-ն ու բազան նախագծել, JWT-ով ու դերերով պաշտպանել, հետո էլ արագ ու հարմար ինտերֆեյս սարքել։ Վերջերս մեծ SPA-ներ եմ անում Redux Toolkit-ով, RTK Query-ով, React Hook Form-ով ու Zod-ով։",
+      "Բաց եմ նոր առաջարկների համար, որտեղ կկարողանամ ամբողջությամբ պատասխանատու լինել իմ աշխատանքի համար, աշխատել ուժեղ թիմում ու շարունակել զարգանալ։"
     ],
     "facts": {
-      "experience": "Experience",
-      "experienceValue": "{{years}}+ years",
-      "location": "Based in",
-      "focus": "Focus",
+      "experience": "Փորձ",
+      "experienceValue": "{{years}}+ տարի",
+      "location": "Ապրում եմ",
+      "focus": "Հիմնական ստեկ",
       "focusValue": "Python + React",
-      "languages": "Languages",
+      "languages": "Լեզուներ",
       "languagesValue": "HY · EN · RU"
     },
-    "contactMe": "Contact me"
+    "contactMe": "Գրել ինձ"
   },
   "skills": {
-    "intro": "Technologies I use to design, build and ship web applications.",
+    "intro": "Տեխնոլոգիաներ, որոնցով նախագծում, ստեղծում ու թողարկում եմ վեբ հավելվածներ։",
     "groups": {
       "frontend": "Frontend",
       "backend": "Backend",
-      "databases": "Databases",
-      "apis": "APIs & Testing",
-      "tools": "Tools & DevOps"
+      "databases": "Տվյալների բազաներ",
+      "apis": "API-ներ և թեստավորում",
+      "tools": "Գործիքներ և DevOps"
     }
   },
   "experience": {
     "types": {
-      "fullTime": "Full-time",
-      "freelance": "Freelance"
+      "fullTime": "Լրիվ դրույք",
+      "freelance": "Ֆրիլանս"
     },
     "items": {
       "profit": {
-        "role": "Full Stack Developer",
-        "location": "Yerevan, Armenia",
+        "role": "Full Stack ծրագրավորող",
+        "location": "Երևան, Հայաստան",
         "bullets": [
-          "Developed full-stack applications with React.js, Redux/MobX, Python (Django, FastAPI), PostgreSQL and SQLAlchemy.",
-          "Implemented role-based access control and JWT authentication with access and refresh tokens.",
-          "Built REST APIs with Django Ninja and integrated frontend applications with backend services and databases.",
-          "Processed CSV data with Pandas and generated automated PDF reports using FPDF.",
-          "Wrote unit and integration tests for business logic, APIs and application workflows.",
-          "Used Claude Code for AI-assisted research, debugging and refactoring."
+          "Ստեղծել եմ full-stack հավելվածներ React.js-ով, Redux/MobX-ով, Python-ով (Django, FastAPI), PostgreSQL-ով և SQLAlchemy-ով։",
+          "Արել եմ դերերով մուտքի կառավարում և JWT աուտենտիֆիկացիա՝ access և refresh թոքեններով։",
+          "Գրել եմ REST API-ներ Django Ninja-ով և frontend-ը կապել backend սերվիսների ու բազաների հետ։",
+          "Pandas-ով մշակել եմ CSV տվյալներ և FPDF-ով ավտոմատ PDF հաշվետվություններ եմ գեներացրել։",
+          "Գրել եմ unit և integration թեստեր բիզնես լոգիկայի, API-ների և աշխատանքային պրոցեսների համար։",
+          "Օգտագործել եմ Claude Code-ը AI-ի օգնությամբ հետազոտության, debugging-ի և refactoring-ի համար։"
         ]
       },
       "freelance": {
-        "role": "Front End Developer",
-        "location": "Remote",
+        "role": "Front End ծրագրավորող",
+        "location": "Հեռավար",
         "bullets": [
-          "Developed and maintained a large-scale property management SPA with React.js, TypeScript, Vite and MUI.",
-          "Built reusable UI components, data tables, forms and a feature-based architecture across multiple business modules.",
-          "Integrated REST APIs with Redux Toolkit and RTK Query, including caching, invalidation, authentication and automatic token refresh.",
-          "Implemented role-based access control, protected routes, a bilingual English/French UI and responsive layouts.",
-          "Built configuration-driven forms with React Hook Form and Zod, including validation, error handling and data workflows.",
-          "Contributed to deployment and delivery with Git/GitHub and Azure Static Web Apps."
+          "Ստեղծել և զարգացրել եմ անշարժ գույքի կառավարման մեծ SPA՝ React.js-ով, TypeScript-ով, Vite-ով և MUI-ով։",
+          "Սարքել եմ բազմակի օգտագործվող UI կոմպոնենտներ, աղյուսակներ, ֆորմաներ և feature-based արխիտեկտուրա մի քանի բիզնես մոդուլների համար։",
+          "REST API-ները ինտեգրել եմ Redux Toolkit-ով ու RTK Query-ով՝ քեշավորում, invalidation, աուտենտիֆիկացիա և թոքենի ավտոմատ թարմացում։",
+          "Արել եմ դերերով մուտք, պաշտպանված route-ներ, երկլեզու (անգլերեն/ֆրանսերեն) ինտերֆեյս և responsive դիզայն։",
+          "Սարքել եմ կոնֆիգուրացիայով աշխատող ֆորմաներ React Hook Form-ով և Zod-ով՝ վալիդացիայով, սխալների մշակմամբ ու տվյալների հետ աշխատանքով։",
+          "Մասնակցել եմ deploy-ին ու թողարկումներին Git/GitHub-ով և Azure Static Web Apps-ով։"
         ]
       }
     }
   },
   "projects": {
-    "intro": "A selection of things I've built. More coming soon.",
+    "intro": "Իմ արածներից մի քանիսը։ Շուտով ավելին կլինի։",
     "kinds": {
-      "client": "Client project",
-      "personal": "Personal project"
+      "client": "Պատվիրատուի նախագիծ",
+      "personal": "Անձնական նախագիծ"
     },
-    "private": "Private client code, available to discuss in an interview",
-    "code": "Code",
-    "live": "Live",
+    "roles": {
+      "frontend": "Frontend",
+      "fullstack": "Full stack"
+    },
+    "private": "Պատվիրատուի փակ կոդ է, կարող եմ պատմել հարցազրույցի ժամանակ",
+    "code": "Կոդ",
+    "live": "Դիտել",
     "items": {
       "propertyManagement": {
-        "title": "Property Management Platform",
-        "description": "A large single-page application for managing properties across several business modules, built for a client as a freelance project.",
+        "title": "Անշարժ գույքի կառավարման հարթակ",
+        "description": "Մեծ single-page հավելված անշարժ գույքի կառավարման համար՝ մի քանի բիզնես մոդուլներով։ Արել եմ պատվիրատուի համար որպես ֆրիլանս նախագիծ։",
         "highlights": [
-          "Feature-based architecture with reusable tables, forms and UI components",
-          "RTK Query data layer with caching, invalidation and automatic token refresh",
-          "Role-based access, protected routes and a bilingual English/French UI"
+          "Syndicate, management and accounting modules: buildings and units, suppliers, disputes, service requests, budgets, journals, expenses, collections and bank reconciliations",
+          "RTK Query data layer with ~180 typed endpoints, tag-based cache invalidation and silent JWT refresh-and-retry",
+          "Config-driven forms with React Hook Form and Zod, plus a generic DataGrid table with server-side pagination and filtering",
+          "Role-based access, unsaved-changes guard, custom MUI theme, deployed to Azure Static Web Apps"
+        ]
+      },
+      "aiBlogGenerator": {
+        "title": "AI Blog Generator — Management Dashboard",
+        "description": "An admin dashboard for an AI pipeline that writes SEO blog posts for many marketing funnels and publishes them to GoHighLevel. I built the frontend that configures each funnel and reviews the generated posts.",
+        "highlights": [
+          "Funnel management: per-funnel OpenAI, Shutterstock and scraped-data settings, plus publishing schedules with time windows and rate limits",
+          "OAuth 2.0 connection flows for GoHighLevel and Google Search Console",
+          "Generate a post, edit its HTML in place and publish it to the client's blog in one screen",
+          "MobX stores, protected routes, Formik + Yup forms and an in-app issue reporter"
+        ]
+      },
+      "giftsMarketplace": {
+        "title": "Local Gifts Marketplace & Franchise Platform",
+        "description": "A gift-card marketplace where shoppers buy gifts from nearby merchants in a mobile app, run by a franchise network. I worked full stack: the FastAPI backend and the React back office for super users, franchisees, sub-franchisees and merchants.",
+        "highlights": [
+          "Franchise territories drawn as polygons on Google Maps and matched to merchants with PostGIS geo queries",
+          "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
+          "Celery + Redis jobs for mass email, Firebase push notifications and expiring gifts and promos",
+          "Dockerized stack (Nginx, PostgreSQL, Redis, Celery, Flower) deployed through GitLab CI"
         ]
       },
       "portfolio": {
-        "title": "This Portfolio — a Desktop OS in the Browser",
-        "description": "The site you're looking at: a desktop-style portfolio with draggable windows, a terminal and a quick view for recruiters, backed by a FastAPI API.",
+        "title": "Այս պորտֆոլիոն՝ աշխատասեղան հենց բրաուզերում",
+        "description": "Կայքը, որը հիմա նայում եք՝ աշխատասեղանի տեսքով պորտֆոլիո՝ պատուհաններով, տերմինալով և ռեկրուտերների համար արագ դիտմամբ։ Backend-ը FastAPI-ով է։",
         "highlights": [
-          "Window manager with drag, resize, focus and minimize built on Zustand and react-rnd",
-          "Three languages (EN/RU/HY), light and dark themes, mobile home-screen layout",
-          "Contact form with validation on both ends, stored in PostgreSQL and delivered by email"
+          "Պատուհանների մենեջեր՝ քաշել, չափը փոխել, ֆոկուս, փոքրացնել՝ Zustand-ով և react-rnd-ով",
+          "Երեք լեզու (EN/RU/HY), լուսավոր ու մութ թեմաներ, առանձին տեսք հեռախոսի համար",
+          "Կոնտակտային ֆորմա՝ վալիդացիա և՛ frontend-ում, և՛ backend-ում, հաղորդագրությունները պահվում են PostgreSQL-ում ու գալիս են email-ով"
         ]
       }
     }
   },
   "education": {
-    "coursesTitle": "Courses",
-    "languagesTitle": "Languages",
+    "coursesTitle": "Դասընթացներ",
+    "languagesTitle": "Լեզուներ",
     "items": {
       "python": {
-        "title": "Python Course",
-        "description": "Backend development with Python and Django REST Framework, plus Flask and React with MobX."
+        "title": "Python դասընթաց",
+        "description": "Backend ծրագրավորում Python-ով և Django REST Framework-ով, նաև Flask և React՝ MobX-ով։"
       },
       "javascript": {
-        "title": "JavaScript Course",
-        "description": "Web fundamentals: HTML, CSS, Bootstrap and JavaScript."
+        "title": "JavaScript դասընթաց",
+        "description": "Վեբի հիմքերը՝ HTML, CSS, Bootstrap և JavaScript։"
       }
     },
     "spoken": {
-      "hy": "Armenian",
-      "en": "English",
-      "ru": "Russian"
+      "hy": "Հայերեն",
+      "en": "Անգլերեն",
+      "ru": "Ռուսերեն"
     },
     "levels": {
-      "native": "Native or bilingual",
-      "professional": "Professional working proficiency"
+      "native": "Մայրենի",
+      "professional": "Աշխատանքային մակարդակ"
     }
   },
   "interests": {
-    "intro": "What I do when I'm not coding.",
+    "intro": "Ինչով եմ զբաղվում, երբ կոդ չեմ գրում։",
     "items": {
       "football": {
-        "title": "Football",
-        "description": "Playing with friends and following the big matches."
+        "title": "Ֆուտբոլ",
+        "description": "Խաղում եմ ընկերներիս հետ ու նայում մեծ խաղերը։"
       },
       "gaming": {
-        "title": "Gaming",
-        "description": "Games are part of why this portfolio looks like a desktop."
+        "title": "Խաղեր",
+        "description": "Մասամբ խաղերի շնորհիվ է, որ այս պորտֆոլիոն աշխատասեղանի տեսք ունի։"
       },
       "ai": {
         "title": "AI",
-        "description": "Exploring AI tools and how they change the way we build software."
+        "description": "Փորձարկում եմ AI գործիքներ ու տեսնում, թե ինչպես են դրանք փոխում ծրագրավորումը։"
       },
       "movies": {
-        "title": "Movies",
-        "description": "A good film is my favourite way to end the week."
+        "title": "Ֆիլմեր",
+        "description": "Լավ ֆիլմը շաբաթն ավարտելու իմ սիրելի ձևն է։"
       },
       "music": {
-        "title": "Music",
-        "description": "Always something playing while I work."
+        "title": "Երաժշտություն",
+        "description": "Աշխատելիս միշտ ինչ-որ բան է հնչում։"
       },
       "cooking": {
-        "title": "Cooking",
-        "description": "Trying new recipes, Armenian classics included."
+        "title": "Խոհարարություն",
+        "description": "Փորձում եմ նոր բաղադրատոմսեր, հայկական դասականներն էլ հետը։"
       },
       "travel": {
-        "title": "Traveling",
-        "description": "Discovering new places, cultures and food."
+        "title": "Ճանապարհորդություն",
+        "description": "Նոր վայրեր, մշակույթներ ու խոհանոցներ բացահայտել։"
       }
     }
   },
   "contact": {
-    "intro": "Have a role, a project or a question? Send me a message, or reach me directly.",
+    "intro": "Ունե՞ք աշխատանքի առաջարկ, նախագիծ կամ հարց։ Գրեք ինձ կամ կապվեք ուղիղ։",
     "labels": {
       "email": "Email",
-      "phone": "Phone",
+      "phone": "Հեռախոս",
       "telegram": "Telegram",
       "github": "GitHub",
       "linkedin": "LinkedIn"
     },
     "form": {
-      "title": "Send a message",
-      "name": "Your name",
-      "email": "Your email",
-      "subject": "Subject",
-      "subjectOptional": "optional",
-      "message": "Message",
-      "submit": "Send message",
-      "sending": "Sending…",
-      "success": "Thanks! Your message has been sent. I'll get back to you soon.",
-      "error": "Sorry, the message couldn't be sent. Please email me directly at {{email}}.",
-      "rateLimited": "You've sent several messages already. Please try again in an hour, or email me at {{email}}.",
-      "sendAnother": "Send another message"
+      "title": "Գրել հաղորդագրություն",
+      "name": "Ձեր անունը",
+      "email": "Ձեր email-ը",
+      "subject": "Թեմա",
+      "subjectOptional": "պարտադիր չէ",
+      "message": "Հաղորդագրություն",
+      "submit": "Ուղարկել",
+      "sending": "Ուղարկվում է…",
+      "success": "Շնորհակալություն։ Հաղորդագրությունն ուղարկվեց, շուտով կպատասխանեմ։",
+      "error": "Չհաջողվեց ուղարկել։ Խնդրում եմ գրեք ուղիղ {{email}} հասցեին։",
+      "rateLimited": "Արդեն մի քանի հաղորդագրություն եք ուղարկել։ Փորձեք մեկ ժամից, կամ գրեք {{email}} հասցեին։",
+      "sendAnother": "Ուղարկել ևս մեկը"
     },
     "validation": {
-      "nameRequired": "Please enter your name",
-      "emailInvalid": "Please enter a valid email",
-      "messageShort": "Please write at least 10 characters",
-      "tooLong": "This is too long"
+      "nameRequired": "Գրեք ձեր անունը",
+      "emailInvalid": "Գրեք ճիշտ email",
+      "messageShort": "Գրեք առնվազն 10 նիշ",
+      "tooLong": "Շատ երկար է"
     }
   },
   "terminal": {
-    "welcome": "Welcome to ArsenOS. Type 'help' to see available commands.",
-    "notFound": "command not found: {{cmd}}. Type 'help' for the list of commands.",
+    "welcome": "Բարի գալուստ ArsenOS։ Գրեք 'help'՝ հրամանները տեսնելու համար։",
+    "notFound": "այսպիսի հրաման չկա՝ {{cmd}}։ Գրեք 'help'՝ ցուցակը տեսնելու համար։",
     "help": {
-      "help": "show this list",
-      "about": "who I am",
-      "skills": "my tech stack",
-      "experience": "where I've worked",
-      "projects": "things I've built",
-      "contact": "how to reach me",
-      "cv": "download my CV",
-      "open": "open an app, e.g. 'open projects'",
-      "theme": "switch light/dark mode",
-      "lang": "change language: lang en | ru | hy",
-      "clear": "clear the screen"
+      "help": "ցույց տալ այս ցուցակը",
+      "about": "ով եմ ես",
+      "skills": "իմ տեխնոլոգիաները",
+      "experience": "որտեղ եմ աշխատել",
+      "projects": "ինչ եմ ստեղծել",
+      "contact": "ինչպես կապվել ինձ հետ",
+      "cv": "ներբեռնել իմ CV-ն",
+      "open": "բացել հավելված, օրինակ՝ 'open projects'",
+      "theme": "փոխել լուսավոր/մութ ռեժիմը",
+      "lang": "փոխել լեզուն՝ lang en | ru | hy",
+      "clear": "մաքրել էկրանը"
     },
-    "opening": "Opening {{app}}…",
-    "openUsage": "usage: open <app>. Apps: {{apps}}",
-    "langUsage": "usage: lang en | ru | hy",
-    "themeSwitched": "Theme switched to {{theme}}.",
-    "downloading": "Downloading CV…",
-    "sudo": "Nice try 😄 You don't have root access here, but you can contact me."
+    "opening": "Բացվում է {{app}}…",
+    "openUsage": "օգտագործում՝ open <app>։ Հավելվածներ՝ {{apps}}",
+    "langUsage": "օգտագործում՝ lang en | ru | hy",
+    "themeSwitched": "Թեման փոխվեց՝ {{theme}}։",
+    "downloading": "CV-ն ներբեռնվում է…",
+    "sudo": "Լավ փորձ էր 😄 Այստեղ root հասանելիություն չունեք, բայց կարող եք ինձ գրել։"
   }
 }

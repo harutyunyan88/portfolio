@@ -41,7 +41,12 @@
   },
   "cv": {
     "open": "Open in new tab",
-    "download": "Download CV"
+    "download": "Download CV",
+    "pdf": {
+      "summary": "Summary",
+      "portfolio": "Portfolio",
+      "footer": "Generated from my portfolio website"
+    }
   },
   "boot": {
     "label": "Starting ArsenOS",
@@ -133,17 +138,42 @@
       "client": "Client project",
       "personal": "Personal project"
     },
+    "roles": {
+      "frontend": "Frontend",
+      "fullstack": "Full stack"
+    },
     "private": "Private client code, available to discuss in an interview",
     "code": "Code",
     "live": "Live",
     "items": {
       "propertyManagement": {
         "title": "Property Management Platform",
-        "description": "A large single-page application for managing properties across several business modules, built for a client as a freelance project.",
+        "description": "A back-office platform for condominium associations, used by property managers, administrators and building presidents to run daily operations and accounting. I built the frontend: a bilingual (English/French), role-aware SPA of about 48,000 lines of TypeScript.",
         "highlights": [
-          "Feature-based architecture with reusable tables, forms and UI components",
-          "RTK Query data layer with caching, invalidation and automatic token refresh",
-          "Role-based access, protected routes and a bilingual English/French UI"
+          "Syndicate, management and accounting modules: buildings and units, suppliers, disputes, service requests, budgets, journals, expenses, collections and bank reconciliations",
+          "RTK Query data layer with ~180 typed endpoints, tag-based cache invalidation and silent JWT refresh-and-retry",
+          "Config-driven forms with React Hook Form and Zod, plus a generic DataGrid table with server-side pagination and filtering",
+          "Role-based access, unsaved-changes guard, custom MUI theme, deployed to Azure Static Web Apps"
+        ]
+      },
+      "aiBlogGenerator": {
+        "title": "AI Blog Generator — Management Dashboard",
+        "description": "An admin dashboard for an AI pipeline that writes SEO blog posts for many marketing funnels and publishes them to GoHighLevel. I built the frontend that configures each funnel and reviews the generated posts.",
+        "highlights": [
+          "Funnel management: per-funnel OpenAI, Shutterstock and scraped-data settings, plus publishing schedules with time windows and rate limits",
+          "OAuth 2.0 connection flows for GoHighLevel and Google Search Console",
+          "Generate a post, edit its HTML in place and publish it to the client's blog in one screen",
+          "MobX stores, protected routes, Formik + Yup forms and an in-app issue reporter"
+        ]
+      },
+      "giftsMarketplace": {
+        "title": "Local Gifts Marketplace & Franchise Platform",
+        "description": "A gift-card marketplace where shoppers buy gifts from nearby merchants in a mobile app, run by a franchise network. I worked full stack: the FastAPI backend and the React back office for super users, franchisees, sub-franchisees and merchants.",
+        "highlights": [
+          "Franchise territories drawn as polygons on Google Maps and matched to merchants with PostGIS geo queries",
+          "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
+          "Celery + Redis jobs for mass email, Firebase push notifications and expiring gifts and promos",
+          "Dockerized stack (Nginx, PostgreSQL, Redis, Celery, Flower) deployed through GitLab CI"
         ]
       },
       "portfolio": {

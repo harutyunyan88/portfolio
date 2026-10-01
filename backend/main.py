@@ -3,11 +3,12 @@ import logging
 from datetime import datetime, timedelta, timezone
 from typing import Annotated
 
-from fastapi import Depends, FastAPI, HTTPException, Request
+from fastapi import Depends, FastAPI, HTTPException, Request, Response
 from sqlalchemy import func, select, text
 from sqlalchemy.orm import Session
 
 from .config import Settings, get_settings
+from .cv import Lang, build_cv
 from .db import get_session
 from .mailer import send_contact_emails
 from .models import ContactMessage
@@ -33,6 +34,28 @@ def health(session: SessionDep) -> dict[str, str]:
     """Also called daily by a Vercel cron job so the free Supabase project isn't paused for inactivity."""
     session.execute(text("select 1"))
     return {"status": "ok"}
+
+
+@app.get("/api/cv", response_class=Response, responses={200: {"content": {"application/pdf": {}}}})
+def cv(request: Request, settings: SettingsDep, lang: Lang = "en", download: bool = True) -> Response:
+    """The CV as a PDF, built from the website's content in the requested language."""
+    if settings.site_url:
+        site_url = settings.site_url
+    elif settings.vercel_project_production_url:
+        site_url = f"https://{settings.vercel_project_production_url}"
+    else:
+        site_url = str(request.base_url)
+
+    disposition = "attachment" if download else "inline"
+    return Response(
+        build_cv(lang, site_url),
+        media_type="application/pdf",
+        headers={
+            "Content-Disposition": f'{disposition}; filename="Arsen_Harutyunyan_CV_{lang.upper()}.pdf"',
+            # Vercel's CDN keeps a copy for a day; every new deployment clears it.
+            "Cache-Control": "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
+        },
+    )
 
 
 @app.post("/api/contact", response_model=ContactOut)

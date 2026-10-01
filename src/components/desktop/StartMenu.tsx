@@ -5,7 +5,7 @@ import { FcFlashOn } from 'react-icons/fc'
 import { FiDownload } from 'react-icons/fi'
 import { Link } from '../../lib/router'
 import { APPS, DESKTOP_ORDER } from '../../apps/registry'
-import { CV_URL } from '../../lib/constants'
+import { cvUrl } from '../../lib/constants'
 import { useWindowsStore } from '../../store/windows'
 import Avatar from '../Avatar'
 
@@ -80,7 +80,7 @@ export default function StartMenu({ onClose, toggleRef }: Props) {
           <FcFlashOn aria-hidden /> {t('common.quickView')}
         </Link>
         <a
-          href={CV_URL}
+          href={cvUrl()}
           download
           className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-accent px-3 py-2 text-sm font-medium text-white hover:opacity-90"
         >
