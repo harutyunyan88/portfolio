@@ -27,18 +27,29 @@ export default function QuickViewPage() {
     <AppHostProvider value={{ mode: 'quick', openApp: scrollToSection }}>
       <div className="min-h-full bg-bg">
         <header className="sticky top-0 z-10 border-b border-border bg-surface backdrop-blur-xl">
-          <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4">
-            <Link to="/" className="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm text-muted hover:text-text">
-              <FiArrowLeft aria-hidden /> <span className="hidden sm:inline">{t('common.backToDesktop')}</span>
+          <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4">
+            {/* Labels never wrap. From lg the section nav shows, "back" becomes icon-only and the CV button
+                shows its text again at xl. The nav scrolls sideways if a language's names still don't fit. */}
+            <Link
+              to="/"
+              aria-label={t('common.backToDesktop')}
+              title={t('common.backToDesktop')}
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-md px-2 py-1.5 text-sm whitespace-nowrap text-muted hover:text-text"
+            >
+              <FiArrowLeft aria-hidden /> <span className="hidden sm:inline lg:hidden">{t('common.backToDesktop')}</span>
             </Link>
-            <nav className="mx-auto hidden gap-1 md:flex">
+            <nav className="mx-auto hidden min-w-0 gap-1 overflow-x-auto [scrollbar-width:none] lg:flex">
               {SECTIONS.map((id) => (
-                <a key={id} href={`#${id}`} className="rounded-md px-2.5 py-1.5 text-sm text-muted hover:bg-accent-soft hover:text-text">
+                <a
+                  key={id}
+                  href={`#${id}`}
+                  className="shrink-0 rounded-md px-2.5 py-1.5 text-sm whitespace-nowrap text-muted hover:bg-accent-soft hover:text-text"
+                >
                   {t(`apps.${id}`)}
                 </a>
               ))}
             </nav>
-            <div className="ml-auto flex items-center md:ml-0">
+            <div className="ml-auto flex shrink-0 items-center lg:ml-0">
               <SearchButton variant="icon" />
               <LanguageSwitcher />
               <ThemeToggle />
@@ -47,9 +58,9 @@ export default function QuickViewPage() {
                 download
                 aria-label={t('cv.download')}
                 title={t('cv.download')}
-                className="ml-1 inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-sm font-medium text-white hover:opacity-90"
+                className="ml-1 inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-sm font-medium whitespace-nowrap text-white hover:opacity-90"
               >
-                <FiDownload aria-hidden /> <span className="hidden lg:inline">{t('cv.download')}</span>
+                <FiDownload aria-hidden /> <span className="hidden sm:inline lg:hidden xl:inline">{t('cv.download')}</span>
               </a>
             </div>
           </div>

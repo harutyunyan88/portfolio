@@ -21,15 +21,22 @@ CONTENT_PATH = ROOT / "src" / "data" / "content.json"
 LOCALES_DIR = ROOT / "src" / "i18n" / "locales"
 FONTS_DIR = Path(__file__).resolve().parent / "fonts"
 PHOTO_PATH = Path(__file__).resolve().parent / "assets" / "avatar.jpg"
+# Font Awesome icons from react-icons (fa6), saved as SVG with a fixed fill colour.
+ICONS_DIR = Path(__file__).resolve().parent / "assets" / "icons"
 
 # Colours (RGB) matching the website's light theme.
 TEXT = (15, 23, 42)
 MUTED = (91, 100, 119)
 ACCENT = (79, 70, 229)
 RULE = (226, 232, 240)
+# The header band, styled after the original CV.
+BAND = (229, 231, 235)
+BAND_TEXT = (55, 65, 81)
 
 MARGIN = 16
-PHOTO_SIZE = 30
+PHOTO_SIZE = 38
+ICON_SIZE = 3.4
+CONTACT_ROW = 6.2
 
 
 def _load_json(path: Path) -> Any:
@@ -77,9 +84,8 @@ class Translator:
 
 
 class CvPdf(FPDF):
-    def __init__(self, footer_text: str) -> None:
+    def __init__(self) -> None:
         super().__init__(format="A4")
-        self.footer_text = footer_text
         self.set_margins(MARGIN, MARGIN, MARGIN)
         self.set_auto_page_break(auto=True, margin=16)
         self.add_font("Noto", "", FONTS_DIR / "NotoSans-Regular.ttf")
@@ -88,11 +94,6 @@ class CvPdf(FPDF):
         self.add_font("NotoArmenian", "B", FONTS_DIR / "NotoSansArmenian-Bold.ttf")
         # Noto Sans has no Armenian letters; those characters are drawn with Noto Sans Armenian.
         self.set_fallback_fonts(["NotoArmenian"])
-
-    def footer(self) -> None:
-        self.set_y(-11)
-        self.font(7.5, color=MUTED)
-        self.cell(0, 5, f"{self.footer_text}  ·  {self.page_no()}/{{nb}}", align="C")
 
     def font(self, size: float, bold: bool = False, color: tuple[int, int, int] = TEXT) -> None:
         self.set_font("Noto", "B" if bold else "", size)
@@ -134,56 +135,73 @@ class CvPdf(FPDF):
         self.set_xy(MARGIN, after)
 
 
-def build_cv(lang: Lang, site_url: str, today: date | None = None) -> bytes:
+def build_cv(lang: Lang, today: date | None = None) -> bytes:
     today = today or date.today()
-    # The PDF only changes with the content, the language, the site URL and the month (years of experience).
-    return _build_cv_cached(lang, site_url.rstrip("/"), today.replace(day=1))
+    # The PDF only changes with the content, the language and the month (years of experience).
+    return _build_cv_cached(lang, today.replace(day=1))
 
 
 @lru_cache(maxsize=12)
-def _build_cv_cached(lang: Lang, site_url: str, month: date) -> bytes:
+def _build_cv_cached(lang: Lang, month: date) -> bytes:
     content = _load_json(CONTENT_PATH)
     t = Translator(_load_json(LOCALES_DIR / f"{lang}.json"), _load_json(LOCALES_DIR / "en.json"))
     years = years_of_experience(content["careerStart"], month)
-    contacts = {c["id"]: c["value"] for c in content["contacts"]}
-    site_label = re.sub(r"^https?://", "", site_url)
+    contacts = {c["id"]: c for c in content["contacts"]}
 
-    pdf = CvPdf(footer_text=f"{t('cv.pdf.footer')}: {site_label}")
+    pdf = CvPdf()
     pdf.set_title(f"{t('profile.name')} — {t('profile.role')}")
     pdf.set_author(t("profile.name"))
     pdf.set_lang(lang)
     pdf.add_page()
 
-    # Header: name, role and contacts on the left, photo on the right.
-    text_width = pdf.epw - PHOTO_SIZE - 6
-    pdf.font(22, bold=True)
-    pdf.multi_cell(text_width, 10, t("profile.name"), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-    pdf.font(13, bold=True, color=ACCENT)
-    pdf.cell(text_width, 7, t("profile.role"), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-    pdf.ln(1.5)
-    contact_lines = [
-        [contacts["email"], contacts["phone"], t("profile.location")],
-        [contacts["linkedin"], contacts["github"], f"Telegram {contacts['telegram']}"],
-        [f"{t('cv.pdf.portfolio')}: {site_label}"],
+    # Header: a full-width grey band like the original CV. Name and role, clickable contacts in two
+    # columns and the summary on the left; the photo on the right.
+    text_width = pdf.epw - PHOTO_SIZE - 10
+    summary = " ".join(t("about.bio", years=years))
+    # (icon, text, link) in reading order, two per row.
+    contact_items = [
+        ("email", contacts["email"]["value"], contacts["email"]["href"]),
+        ("phone", contacts["phone"]["value"], contacts["phone"]["href"]),
+        ("location", t("profile.location"), None),
+        ("linkedin", contacts["linkedin"]["value"], contacts["linkedin"]["href"]),
+        ("github", contacts["github"]["value"], contacts["github"]["href"]),
+        ("telegram", contacts["telegram"]["value"], contacts["telegram"]["href"]),
     ]
-    for parts in contact_lines:
-        pdf.font(8.8, color=MUTED)
-        pdf.multi_cell(text_width, 4.6, "  ·  ".join(parts), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-    header_bottom = pdf.get_y()
+    rows = (len(contact_items) + 1) // 2
+    pdf.font(9.3)
+    summary_height = pdf.multi_cell(text_width, 4.7, summary, dry_run=True, output="HEIGHT")
+    top = 12
+    band_height = max(top + 10 + 2 + rows * CONTACT_ROW + 3 + summary_height + 9, PHOTO_SIZE + 2 * top)
+    pdf.set_fill_color(*BAND)
+    pdf.rect(0, 0, pdf.w, band_height, style="F")
+
+    pdf.set_xy(MARGIN, top)
+    pdf.font(20, bold=True, color=BAND_TEXT)
+    name = t("profile.name")
+    pdf.cell(pdf.get_string_width(name) + 3, 10, name)
+    pdf.font(12, color=BAND_TEXT)
+    pdf.cell(0, 10.6, t("profile.role"), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.ln(2)
+
+    column = text_width / 2
+    contacts_top = pdf.get_y()
+    for i, (icon, text, link) in enumerate(contact_items):
+        x = MARGIN + (i % 2) * column
+        y = contacts_top + (i // 2) * CONTACT_ROW
+        pdf.image(ICONS_DIR / f"{icon}.svg", x=x, y=y + (CONTACT_ROW - ICON_SIZE) / 2, h=ICON_SIZE)
+        pdf.set_xy(x + ICON_SIZE + 2, y)
+        pdf.font(9.3, color=BAND_TEXT)
+        pdf.cell(column - ICON_SIZE - 3, CONTACT_ROW, text, link=link or "")
+    pdf.set_xy(MARGIN, contacts_top + rows * CONTACT_ROW + 3)
+    pdf.font(9.3, color=BAND_TEXT)
+    pdf.multi_cell(text_width, 4.7, summary, align="L", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     if PHOTO_PATH.exists():
-        x, y, radius = pdf.w - MARGIN - PHOTO_SIZE, MARGIN, PHOTO_SIZE / 2
+        x, y = pdf.w - MARGIN - PHOTO_SIZE, (band_height - PHOTO_SIZE) / 2
         # Despite its docs, round_clip's `r` acts as the diameter (checked by rendering the PDF).
         with pdf.round_clip(x=x, y=y, r=PHOTO_SIZE):
             pdf.image(PHOTO_PATH, x=x, y=y, w=PHOTO_SIZE, h=PHOTO_SIZE)
-        pdf.set_draw_color(*ACCENT)
-        pdf.set_line_width(0.6)
-        pdf.circle(x=x + radius, y=y + radius, radius=radius)  # since fpdf2 2.8.1, (x, y) is the centre
-    pdf.set_y(max(header_bottom, MARGIN + PHOTO_SIZE) + 2)
-
-    # Summary
-    pdf.section(t("cv.pdf.summary"))
-    pdf.paragraph(" ".join(t("about.bio", years=years)))
+    pdf.set_y(band_height + 2)
 
     # Experience
     pdf.section(t("apps.experience"))

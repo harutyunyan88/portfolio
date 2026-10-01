@@ -10,18 +10,26 @@ from backend import main
 from backend.config import Settings, get_settings
 from backend.cv import CONTENT_PATH, LOCALES_DIR, Translator, years_of_experience
 
-SITE = "https://example.test"
-
 
 @pytest.fixture
 def client():
-    main.app.dependency_overrides[get_settings] = lambda: Settings(_env_file=None, site_url=SITE)
+    main.app.dependency_overrides[get_settings] = lambda: Settings(_env_file=None)
     yield TestClient(main.app)
     main.app.dependency_overrides.clear()
 
 
 def pdf_text(data: bytes) -> str:
     return "\n".join(page.extract_text() for page in PdfReader(io.BytesIO(data)).pages)
+
+
+def pdf_links(data: bytes) -> set[str]:
+    links = set()
+    for page in PdfReader(io.BytesIO(data)).pages:
+        for annot in page.get("/Annots") or []:
+            action = annot.get_object().get("/A")
+            if action and "/URI" in action:
+                links.add(action["/URI"])
+    return links
 
 
 @pytest.mark.parametrize(
@@ -38,7 +46,12 @@ def test_cv_in_each_language(client, lang, expected) -> None:
     text = pdf_text(res.content)
     assert expected in text
     assert "arsen.harutyunyan088@gmail.com" in text
-    assert "example.test" in text  # the site address from settings
+
+
+def test_cv_contacts_are_clickable_links(client) -> None:
+    res = client.get("/api/cv?lang=en")
+    content = json.loads(CONTENT_PATH.read_text(encoding="utf-8"))
+    assert {contact["href"] for contact in content["contacts"]} <= pdf_links(res.content)
 
 
 def test_cv_can_be_shown_inline(client) -> None:

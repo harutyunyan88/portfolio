@@ -41,12 +41,7 @@
   },
   "cv": {
     "open": "Բացել նոր պատուհանում",
-    "download": "Ներբեռնել CV-ն",
-    "pdf": {
-      "summary": "Իմ մասին",
-      "portfolio": "Պորտֆոլիո",
-      "footer": "Ստեղծված է իմ պորտֆոլիո կայքից"
-    }
+    "download": "Ներբեռնել CV-ն"
   },
   "boot": {
     "label": "ArsenOS-ը միանում է",
@@ -80,10 +75,11 @@
   "about": {
     "greeting": "Բարև, ես Արսենն եմ 👋",
     "bio": [
-      "Ես Full Stack ծրագրավորող եմ Երևանից, ունեմ {{years}}+ տարվա փորձ։ Ստեղծում եմ իրական վեբ հավելվածներ Python-ով (Django, FastAPI) և React-ով՝ TypeScript-ով։",
-      "Սիրում եմ ֆունկցիոնալի վրա աշխատել սկզբից մինչև վերջ՝ API-ն ու բազան նախագծել, JWT-ով ու դերերով պաշտպանել, հետո էլ արագ ու հարմար ինտերֆեյս սարքել։ Վերջերս մեծ SPA-ներ եմ անում Redux Toolkit-ով, RTK Query-ով, React Hook Form-ով ու Zod-ով։",
-      "Բաց եմ նոր առաջարկների համար, որտեղ կկարողանամ ամբողջությամբ պատասխանատու լինել իմ աշխատանքի համար, աշխատել ուժեղ թիմում ու շարունակել զարգանալ։"
+      "Full Stack ծրագրավորող եմ Երևանից, ու արդեն {{years}}+ տարի է՝ վեբ հավելվածներ եմ սարքում՝ back-office համակարգերից ու մարքեթփլեյսներից մինչև ադմին պանելներ։ Ամենաշատը սիրում եմ բարդ բիզնես պրոցեսները վերածել այնպիսի պրոդուկտի, որ օգտագործելիս ամեն ինչ պարզ ու հարմար լինի։",
+      "Հիմնականում աշխատում եմ Python-ով (Django, FastAPI) ու React-ով՝ TypeScript-ի հետ, և կարող եմ ֆիչը սկզբից մինչև վերջ ինքս անել՝ բազայից մինչև ինտերֆեյս։ Հիմա նաև սովորում եմ AI-ով ֆունկցիոնալ սարքել Claude API-ի օգնությամբ։",
+      "Աշխատել եմ թե՛ թիմում, թե՛ ինքնուրույն՝ ֆրիլանս նախագծերում, դրա համար էլ ինձ հարմար եմ զգում թե՛ թիմով սերտ աշխատելիս, թե՛ երբ տասկը լրիվ ինձ վրա է։ Ինձ համար կարևոր են անկեղծ շփումը, օգտակար code review-ները ու պարզ, հեշտ կարդացվող կոդը։"
     ],
+    "siteNote": "Այս պորտֆոլիոն սարքել եմ vibe coding-ով՝ AI-ի հետ միասին, որպես փոքրիկ OS բրաուզերում, որ ինձ ավելի հետաքրքիր ձևով ճանաչեք, քան սովորական PDF-ով։ Բացեք մի քանի պատուհան, փորձեք տերմինալը, իսկ եթե ժամանակ քիչ ունեք՝ անցեք «Արագ դիտում»-ին։",
     "facts": {
       "experience": "Փորձ",
       "experienceValue": "{{years}}+ տարի",
@@ -102,6 +98,7 @@
       "backend": "Backend",
       "databases": "Տվյալների բազաներ",
       "apis": "API-ներ և թեստավորում",
+      "ai": "AI & LLMs",
       "tools": "Գործիքներ և DevOps"
     }
   },
@@ -141,7 +138,8 @@
     "intro": "Իմ արածներից մի քանիսը։ Շուտով ավելին կլինի։",
     "kinds": {
       "client": "Պատվիրատուի նախագիծ",
-      "personal": "Անձնական նախագիծ"
+      "personal": "Անձնական նախագիծ",
+      "learning": "Learning project"
     },
     "roles": {
       "frontend": "Frontend",
@@ -179,6 +177,16 @@
           "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
           "Celery + Redis jobs for mass email, Firebase push notifications and expiring gifts and promos",
           "Dockerized stack (Nginx, PostgreSQL, Redis, Celery, Flower) deployed through GitLab CI"
+        ]
+      },
+      "aiLab": {
+        "title": "AI Fundamentals Lab — Building with Claude",
+        "description": "A guided course I'm working through to learn how to build LLM features on Anthropic's Claude API. Lesson by lesson, I build each concept as a FastAPI endpoint: from prompting and streaming to retrieval-augmented generation (RAG) and an agent that uses tools.",
+        "highlights": [
+          "RAG pipeline: paragraph-aware chunking, Voyage AI embeddings in pgvector, semantic search and answers grounded in the retrieved documents",
+          "Tool-use agent where Claude decides when to call a calculator or search the document store",
+          "Streaming chat over Server-Sent Events with a React client, plus conversation memory stored in PostgreSQL",
+          "Production basics: structured output, retries and error handling, and prompt caching to cut cost"
         ]
       },
       "portfolio": {
