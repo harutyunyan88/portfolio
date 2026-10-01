@@ -1,11 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { FiArrowLeft, FiDownload } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
+import { Link } from '../lib/router'
 import AppContent from '../apps/AppContent'
 import { AppHostProvider } from '../apps/AppHost'
 import { DESKTOP_ORDER, type AppId } from '../apps/registry'
+import CommandPalette from '../components/CommandPalette'
 import LanguageSwitcher from '../components/controls/LanguageSwitcher'
+import SearchButton from '../components/controls/SearchButton'
 import ThemeToggle from '../components/controls/ThemeToggle'
+import Reveal from '../components/Reveal'
 import { CV_URL } from '../lib/constants'
 
 // The CV and terminal are desktop "programs"; the quick view links to the CV instead.
@@ -36,6 +39,7 @@ export default function QuickViewPage() {
               ))}
             </nav>
             <div className="ml-auto flex items-center md:ml-0">
+              <SearchButton variant="icon" />
               <LanguageSwitcher />
               <ThemeToggle />
               <a
@@ -57,13 +61,16 @@ export default function QuickViewPage() {
           </h1>
           <div className="space-y-6">
             {SECTIONS.map((id) => (
-              <section key={id} id={id} className="scroll-mt-20 overflow-hidden rounded-2xl border border-border bg-surface-solid">
-                <AppContent id={id} />
-              </section>
+              <Reveal key={id}>
+                <section id={id} className="scroll-mt-20 overflow-hidden rounded-2xl border border-border bg-surface-solid">
+                  <AppContent id={id} />
+                </section>
+              </Reveal>
             ))}
           </div>
         </main>
       </div>
+      <CommandPalette />
     </AppHostProvider>
   )
 }

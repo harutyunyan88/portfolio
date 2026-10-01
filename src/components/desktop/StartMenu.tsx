@@ -1,9 +1,9 @@
-import { motion } from 'motion/react'
+import * as m from 'motion/react-m'
 import { useEffect, useRef, type RefObject } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FcFlashOn } from 'react-icons/fc'
 import { FiDownload } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
+import { Link } from '../../lib/router'
 import { APPS, DESKTOP_ORDER } from '../../apps/registry'
 import { CV_URL } from '../../lib/constants'
 import { useWindowsStore } from '../../store/windows'
@@ -35,7 +35,7 @@ export default function StartMenu({ onClose, toggleRef }: Props) {
   }, [onClose, toggleRef])
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
@@ -87,6 +87,6 @@ export default function StartMenu({ onClose, toggleRef }: Props) {
           <FiDownload aria-hidden /> {t('cv.download')}
         </a>
       </div>
-    </motion.div>
+    </m.div>
   )
 }

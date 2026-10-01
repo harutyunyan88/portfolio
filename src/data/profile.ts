@@ -5,8 +5,11 @@ import { SiGithub, SiTelegram } from 'react-icons/si'
 
 export const CAREER_START = new Date(2020, 9) // October 2020
 
-export const yearsOfExperience = () =>
-  Math.floor((Date.now() - CAREER_START.getTime()) / (365.25 * 24 * 60 * 60 * 1000))
+/** Whole years since CAREER_START, counted in calendar months (so October 2026 is exactly 6). */
+export const yearsOfExperience = (now = new Date()) => {
+  const months = (now.getFullYear() - CAREER_START.getFullYear()) * 12 + (now.getMonth() - CAREER_START.getMonth())
+  return Math.floor(months / 12)
+}
 
 export type ContactLink = {
   id: 'email' | 'phone' | 'telegram' | 'github' | 'linkedin'

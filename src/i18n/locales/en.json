@@ -43,6 +43,30 @@
     "open": "Open in new tab",
     "download": "Download CV"
   },
+  "boot": {
+    "label": "Starting ArsenOS",
+    "skip": "Click or press any key to skip",
+    "steps": ["Loading skills…", "Compiling experience…", "Mounting projects…", "Starting desktop…"]
+  },
+  "palette": {
+    "title": "Command menu",
+    "open": "Open command menu",
+    "searchHint": "Search or jump to…",
+    "placeholder": "Type a command or search…",
+    "noResults": "No results",
+    "copyEmail": "Copy email address",
+    "copied": "Copied!",
+    "groups": {
+      "apps": "Apps",
+      "actions": "Actions",
+      "links": "Contact & links"
+    },
+    "hints": {
+      "navigate": "navigate",
+      "select": "select",
+      "close": "close"
+    }
+  },
   "about": {
     "greeting": "Hi, I'm Arsen 👋",
     "bio": [

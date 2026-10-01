@@ -55,6 +55,49 @@
 
   --font-sans: 'Inter Variable', 'Noto Sans Armenian', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+
+  /* Entrance animations; pair with an inline animation-delay to stagger lists. */
+  --animate-rise: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-slide-up: slide-up 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-pop: pop 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+  }
+}
+
+@keyframes boot-progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Scroll-reveal used by <Reveal>; content stays visible if JavaScript or IntersectionObserver is missing. */
+.reveal {
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal[data-hidden='true'] {
+  opacity: 0;
+  transform: translateY(24px);
 }
 
 html,
@@ -75,11 +118,23 @@ body {
   background: var(--wallpaper);
 }
 
+/* iOS Safari zooms the page when a field with text under 16px is focused.
+   Using 16px on touch devices prevents that without disabling pinch-zoom. */
+@media (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
   }
 }

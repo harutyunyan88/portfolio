@@ -187,7 +187,7 @@ export default function TerminalApp() {
 
   return (
     <div
-      className="h-full min-h-72 overflow-auto bg-[#0d1117] p-4 font-mono text-[13px] leading-relaxed text-slate-300"
+      className="h-full min-h-72 overflow-auto bg-[#0d1117] p-4 font-mono text-[13px] leading-relaxed pointer-coarse:text-base text-slate-300"
       onClick={() => inputRef.current?.focus()}
     >
       {lines.map((line) => (
