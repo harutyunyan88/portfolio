@@ -41,12 +41,7 @@
   },
   "cv": {
     "open": "Открыть в новой вкладке",
-    "download": "Скачать CV",
-    "pdf": {
-      "summary": "Обо мне",
-      "portfolio": "Портфолио",
-      "footer": "Создано на сайте моего портфолио"
-    }
+    "download": "Скачать CV"
   },
   "boot": {
     "label": "ArsenOS запускается",
@@ -84,6 +79,7 @@
       "Мне нравится вести фичу от начала до конца: спроектировать API и базу данных, защитить всё через JWT и роли, а потом сделать быстрый и удобный интерфейс. Последнее время делаю большие SPA на Redux Toolkit, RTK Query, React Hook Form и Zod.",
       "Открыт к новым предложениям, где смогу полностью отвечать за свою часть работы, работать в сильной команде и дальше расти."
     ],
+    "siteNote": "I built this portfolio with vibe coding, together with AI, as a small desktop-style OS, so you can get to know me in a more fun way than a PDF. Open a few windows, try the terminal, or switch to Quick view if you're short on time.",
     "facts": {
       "experience": "Опыт",
       "experienceValue": "{{years}}+ лет",
@@ -102,6 +98,7 @@
       "backend": "Backend",
       "databases": "Базы данных",
       "apis": "API и тестирование",
+      "ai": "AI & LLMs",
       "tools": "Инструменты и DevOps"
     }
   },
@@ -141,7 +138,8 @@
     "intro": "Несколько моих работ. Скоро будет больше.",
     "kinds": {
       "client": "Проект для клиента",
-      "personal": "Личный проект"
+      "personal": "Личный проект",
+      "learning": "Learning project"
     },
     "roles": {
       "frontend": "Frontend",
@@ -179,6 +177,16 @@
           "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
           "Celery + Redis jobs for mass email, Firebase push notifications and expiring gifts and promos",
           "Dockerized stack (Nginx, PostgreSQL, Redis, Celery, Flower) deployed through GitLab CI"
+        ]
+      },
+      "aiLab": {
+        "title": "AI Fundamentals Lab — Building with Claude",
+        "description": "A guided course I'm working through to learn how to build LLM features on Anthropic's Claude API. Lesson by lesson, I build each concept as a FastAPI endpoint: from prompting and streaming to retrieval-augmented generation (RAG) and an agent that uses tools.",
+        "highlights": [
+          "RAG pipeline: paragraph-aware chunking, Voyage AI embeddings in pgvector, semantic search and answers grounded in the retrieved documents",
+          "Tool-use agent where Claude decides when to call a calculator or search the document store",
+          "Streaming chat over Server-Sent Events with a React client, plus conversation memory stored in PostgreSQL",
+          "Production basics: structured output, retries and error handling, and prompt caching to cut cost"
         ]
       },
       "portfolio": {

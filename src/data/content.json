@@ -1,6 +1,6 @@
 {
   "$comment": "Single source of facts for the website (src/data/*.ts) and the CV PDF (backend/cv.py). Texts live in src/i18n/locales.",
-  "careerStart": "2020-10",
+  "careerStart": "2021-10",
   "contacts": [
     { "id": "email", "value": "arsen.harutyunyan088@gmail.com", "href": "mailto:arsen.harutyunyan088@gmail.com" },
     { "id": "phone", "value": "+374 98 82 23 29", "href": "tel:+37498822329" },
@@ -37,8 +37,12 @@
     { "id": "databases", "skills": ["PostgreSQL", "MySQL", "MongoDB"] },
     { "id": "apis", "skills": ["REST APIs", "JWT Auth", "Unit & Integration Testing"] },
     {
+      "id": "ai",
+      "skills": ["Claude API", "Prompt Engineering", "RAG", "Embeddings", "pgvector", "Tool Use & Agents", "Claude Code"]
+    },
+    {
       "id": "tools",
-      "skills": ["Git", "GitHub", "GitLab", "GitHub Actions", "Docker", "Azure Static Web Apps", "Jira", "Trello", "Claude Code"]
+      "skills": ["Git", "GitHub", "GitLab", "GitHub Actions", "Docker", "Azure Static Web Apps", "Jira", "Trello"]
     }
   ],
   "experience": [
@@ -106,6 +110,12 @@
         "Docker",
         "GitLab CI"
       ]
+    },
+    {
+      "id": "aiLab",
+      "kind": "learning",
+      "role": "fullstack",
+      "tech": ["Python", "FastAPI", "Claude API", "Voyage AI", "PostgreSQL", "pgvector", "SQLAlchemy", "Alembic", "Supabase", "React"]
     },
     {
       "id": "portfolio",

@@ -2,6 +2,7 @@ import { AnimatePresence } from 'motion/react'
 import * as m from 'motion/react-m'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Avatar from './Avatar'
 
 const BOOT_MS = 1400
 const SESSION_KEY = 'booted'
@@ -55,9 +56,8 @@ export default function BootScreen() {
           transition={{ duration: 0.35, ease: 'easeOut' }}
         >
           <div className="flex w-64 flex-col items-center gap-5">
-            <div className="grid size-20 animate-pop place-items-center rounded-2xl bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 text-2xl font-bold text-white shadow-2xl shadow-indigo-500/30">
-              AH
-            </div>
+            <Avatar className="size-20 animate-pop text-2xl shadow-2xl shadow-indigo-500/30" />
+
             <p className="animate-rise text-lg font-semibold tracking-wide" style={{ animationDelay: '100ms' }}>
               ArsenOS
             </p>

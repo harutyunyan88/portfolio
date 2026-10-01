@@ -35,6 +35,8 @@ export default function AboutApp() {
         {bio.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
+        {/* About the site itself, so it's left out of the CV summary (which uses only about.bio). */}
+        <p>{t('about.siteNote')}</p>
       </div>
 
       <dl className="mt-6 grid grid-cols-2 gap-3 @xl:grid-cols-4">

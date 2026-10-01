@@ -41,17 +41,17 @@
   },
   "cv": {
     "open": "Open in new tab",
-    "download": "Download CV",
-    "pdf": {
-      "summary": "Summary",
-      "portfolio": "Portfolio",
-      "footer": "Generated from my portfolio website"
-    }
+    "download": "Download CV"
   },
   "boot": {
     "label": "Starting ArsenOS",
     "skip": "Click or press any key to skip",
-    "steps": ["Loading skills…", "Compiling experience…", "Mounting projects…", "Starting desktop…"]
+    "steps": [
+      "Loading skills…",
+      "Compiling experience…",
+      "Mounting projects…",
+      "Starting desktop…"
+    ]
   },
   "palette": {
     "title": "Command menu",
@@ -75,10 +75,11 @@
   "about": {
     "greeting": "Hi, I'm Arsen 👋",
     "bio": [
-      "I'm a Full Stack Developer from Yerevan with {{years}}+ years of experience building production web applications with Python (Django, FastAPI) and React with TypeScript.",
-      "I enjoy the whole journey of a feature: designing the API and database, securing it with JWT and role-based access, and turning it into a fast, accessible interface. Lately I've been building large SPAs with Redux Toolkit, RTK Query, React Hook Form and Zod.",
-      "I'm open to new opportunities where I can take ownership of features end to end, work with a strong team, and keep growing."
+      "I'm a Full Stack Developer from Yerevan with {{years}}+ years of experience building web applications, from back-office platforms and marketplaces to admin dashboards. I enjoy turning complex business workflows into products that feel simple to use.",
+      "I work mainly with Python (Django, FastAPI) and React with TypeScript, and I'm comfortable taking a feature from the database all the way to the interface. Right now I'm also learning to build AI features with the Claude API.",
+      "I've worked both in teams and independently on freelance projects, so I'm comfortable collaborating closely or owning a task on my own. I value honest communication, helpful code reviews and simple, readable code."
     ],
+    "siteNote": "I built this portfolio with vibe coding, together with AI, as a small desktop-style OS, so you can get to know me in a more fun way than a PDF. Open a few windows, try the terminal, or switch to Quick view if you're short on time.",
     "facts": {
       "experience": "Experience",
       "experienceValue": "{{years}}+ years",
@@ -97,6 +98,7 @@
       "backend": "Backend",
       "databases": "Databases",
       "apis": "APIs & Testing",
+      "ai": "AI & LLMs",
       "tools": "Tools & DevOps"
     }
   },
@@ -136,7 +138,8 @@
     "intro": "A selection of things I've built. More coming soon.",
     "kinds": {
       "client": "Client project",
-      "personal": "Personal project"
+      "personal": "Personal project",
+      "learning": "Learning project"
     },
     "roles": {
       "frontend": "Frontend",
@@ -174,6 +177,16 @@
           "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
           "Celery + Redis jobs for mass email, Firebase push notifications and expiring gifts and promos",
           "Dockerized stack (Nginx, PostgreSQL, Redis, Celery, Flower) deployed through GitLab CI"
+        ]
+      },
+      "aiLab": {
+        "title": "AI Fundamentals Lab — Building with Claude",
+        "description": "A guided course I'm working through to learn how to build LLM features on Anthropic's Claude API. Lesson by lesson, I build each concept as a FastAPI endpoint: from prompting and streaming to retrieval-augmented generation (RAG) and an agent that uses tools.",
+        "highlights": [
+          "RAG pipeline: paragraph-aware chunking, Voyage AI embeddings in pgvector, semantic search and answers grounded in the retrieved documents",
+          "Tool-use agent where Claude decides when to call a calculator or search the document store",
+          "Streaming chat over Server-Sent Events with a React client, plus conversation memory stored in PostgreSQL",
+          "Production basics: structured output, retries and error handling, and prompt caching to cut cost"
         ]
       },
       "portfolio": {

@@ -37,18 +37,12 @@ def health(session: SessionDep) -> dict[str, str]:
 
 
 @app.get("/api/cv", response_class=Response, responses={200: {"content": {"application/pdf": {}}}})
-def cv(request: Request, settings: SettingsDep, lang: Lang = "en", download: bool = True) -> Response:
+def cv(lang: Lang = "en", download: bool = True) -> Response:
     """The CV as a PDF, built from the website's content in the requested language."""
-    if settings.site_url:
-        site_url = settings.site_url
-    elif settings.vercel_project_production_url:
-        site_url = f"https://{settings.vercel_project_production_url}"
-    else:
-        site_url = str(request.base_url)
 
     disposition = "attachment" if download else "inline"
     return Response(
-        build_cv(lang, site_url),
+        build_cv(lang),
         media_type="application/pdf",
         headers={
             "Content-Disposition": f'{disposition}; filename="Arsen_Harutyunyan_CV_{lang.upper()}.pdf"',

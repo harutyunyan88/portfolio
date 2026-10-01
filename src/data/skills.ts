@@ -1,5 +1,6 @@
 import type { IconType } from 'react-icons'
 import {
+  SiAnthropic,
   SiBootstrap,
   SiClaude,
   SiCss,
@@ -36,7 +37,7 @@ import {
   SiVite,
   SiZod,
 } from 'react-icons/si'
-import { TbApi, TbCode, TbTestPipe } from 'react-icons/tb'
+import { TbApi, TbCode, TbDatabaseSearch, TbMessageChatbot, TbRobot, TbTestPipe, TbVectorTriangle } from 'react-icons/tb'
 import { VscAzure } from 'react-icons/vsc'
 import content from './content.json'
 
@@ -48,7 +49,7 @@ export type Skill = {
 }
 
 export type SkillGroup = {
-  id: 'frontend' | 'backend' | 'databases' | 'apis' | 'tools'
+  id: 'frontend' | 'backend' | 'databases' | 'apis' | 'ai' | 'tools'
   skills: Skill[]
 }
 
@@ -92,6 +93,12 @@ const STYLES: Record<string, Omit<Skill, 'name'>> = {
   'Azure Static Web Apps': { icon: VscAzure, color: '#0078D4' },
   Jira: { icon: SiJira, color: '#0052CC' },
   Trello: { icon: SiTrello, color: '#0079BF' },
+  'Claude API': { icon: SiAnthropic },
+  'Prompt Engineering': { icon: TbMessageChatbot, color: '#D97757' },
+  RAG: { icon: TbDatabaseSearch, color: '#0EA5E9' },
+  Embeddings: { icon: TbVectorTriangle, color: '#8B5CF6' },
+  pgvector: { icon: SiPostgresql, color: '#4169E1' },
+  'Tool Use & Agents': { icon: TbRobot, color: '#10B981' },
   'Claude Code': { icon: SiClaude, color: '#D97757' },
 }
 
