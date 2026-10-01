@@ -1,15 +1,18 @@
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence } from 'motion/react'
+import * as m from 'motion/react-m'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FcFlashOn } from 'react-icons/fc'
 import { FiChevronLeft } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
+import { Link } from '../../lib/router'
 import AppContent from '../../apps/AppContent'
 import { AppHostProvider } from '../../apps/AppHost'
 import { APPS, DESKTOP_ORDER, type AppId } from '../../apps/registry'
 import { useClock } from '../../hooks/useClock'
 import Avatar from '../Avatar'
+import CommandPalette from '../CommandPalette'
 import LanguageSwitcher from '../controls/LanguageSwitcher'
+import SearchButton from '../controls/SearchButton'
 import ThemeToggle from '../controls/ThemeToggle'
 
 // Phone version of the desktop: an app grid, and apps open full screen.
@@ -26,22 +29,23 @@ export default function MobileHome() {
             {now.toLocaleTimeString(i18n.resolvedLanguage, { hour: '2-digit', minute: '2-digit' })}
           </time>
           <div className="flex items-center">
+            <SearchButton variant="icon" />
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
         </header>
 
-        <div className="flex flex-col items-center gap-2 px-6 pt-6 pb-8 text-center">
+        <div className="flex animate-rise flex-col items-center gap-2 px-6 pt-6 pb-8 text-center">
           <Avatar className="size-20 text-2xl shadow-xl" />
           <h1 className="text-xl font-semibold">{t('profile.name')}</h1>
           <p className="text-sm text-muted">{t('profile.role')}</p>
         </div>
 
         <ul className="grid grid-cols-4 gap-x-2 gap-y-5 px-4">
-          {DESKTOP_ORDER.map((id) => {
+          {DESKTOP_ORDER.map((id, i) => {
             const Icon = APPS[id].icon
             return (
-              <li key={id}>
+              <li key={id} className="animate-pop" style={{ animationDelay: `${150 + i * 40}ms` }}>
                 <button
                   type="button"
                   onClick={() => setOpenApp(id)}
@@ -70,6 +74,7 @@ export default function MobileHome() {
           {openApp && <MobileAppView key={openApp} id={openApp} onBack={() => setOpenApp(null)} />}
         </AnimatePresence>
       </div>
+      <CommandPalette />
     </AppHostProvider>
   )
 }
@@ -78,7 +83,7 @@ function MobileAppView({ id, onBack }: { id: AppId; onBack: () => void }) {
   const { t } = useTranslation()
 
   return (
-    <motion.section
+    <m.section
       role="dialog"
       aria-label={t(`apps.${id}`)}
       initial={{ y: '100%' }}
@@ -100,6 +105,6 @@ function MobileAppView({ id, onBack }: { id: AppId; onBack: () => void }) {
       <div className="min-h-0 flex-1 overflow-auto">
         <AppContent id={id} />
       </div>
-    </motion.section>
+    </m.section>
   )
 }

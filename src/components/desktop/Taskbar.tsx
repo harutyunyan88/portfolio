@@ -5,6 +5,7 @@ import { APPS, type AppId } from '../../apps/registry'
 import { useClock } from '../../hooks/useClock'
 import { TASKBAR_HEIGHT, useWindowsStore } from '../../store/windows'
 import LanguageSwitcher from '../controls/LanguageSwitcher'
+import SearchButton from '../controls/SearchButton'
 import ThemeToggle from '../controls/ThemeToggle'
 import StartMenu from './StartMenu'
 
@@ -26,7 +27,7 @@ export default function Taskbar() {
   return (
     <footer
       style={{ height: TASKBAR_HEIGHT }}
-      className="relative z-[9999] flex items-center gap-1 border-t border-border bg-taskbar px-2 backdrop-blur-xl"
+      className="relative z-[9999] flex animate-slide-up items-center gap-1 border-t border-border bg-taskbar px-2 backdrop-blur-xl"
     >
       <button
         ref={startRef}
@@ -44,6 +45,8 @@ export default function Taskbar() {
         </span>
       </button>
       {startOpen && <StartMenu onClose={() => setStartOpen(false)} toggleRef={startRef} />}
+
+      <SearchButton variant="taskbar" className="mr-1" />
 
       <nav className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
         {openIds.map((id) => {
@@ -73,6 +76,7 @@ export default function Taskbar() {
       </nav>
 
       <div className="flex items-center gap-1">
+        <SearchButton variant="icon" className="lg:hidden" />
         <LanguageSwitcher direction="up" />
         <ThemeToggle />
         <time dateTime={now.toISOString()} className="ml-1 px-2 text-right text-xs leading-tight tabular-nums">

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { FiMapPin } from 'react-icons/fi'
 import { EXPERIENCE } from '../data/experience'
 import { formatMonth } from '../lib/format'
-import { AppPage, Tag, TagList } from './ui'
+import { AppPage, stagger, Tag, TagList } from './ui'
 
 export default function ExperienceApp() {
   const { t, i18n } = useTranslation()
@@ -11,12 +11,12 @@ export default function ExperienceApp() {
   return (
     <AppPage title={t('apps.experience')}>
       <ol className="relative space-y-8 border-l-2 border-border pl-6">
-        {EXPERIENCE.map((job) => {
+        {EXPERIENCE.map((job, i) => {
           const bullets = t(`experience.items.${job.id}.bullets`, { returnObjects: true }) as string[]
           const period = `${formatMonth(job.start, locale)} — ${job.end ? formatMonth(job.end, locale) : t('common.present')}`
 
           return (
-            <li key={job.id} className="relative">
+            <li key={job.id} style={stagger(i, 150)} className="relative animate-rise">
               <span
                 aria-hidden
                 className={

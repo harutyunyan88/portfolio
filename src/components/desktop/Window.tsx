@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { motion } from 'motion/react'
+import * as m from 'motion/react-m'
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FiMaximize2, FiMinimize2, FiMinus, FiX } from 'react-icons/fi'
@@ -31,14 +31,17 @@ export default function Window({ win }: { win: WindowState }) {
       onResizeStop={(_, __, ref, ___, pos) =>
         resize(win.id, { width: ref.offsetWidth, height: ref.offsetHeight, x: pos.x, y: pos.y })
       }
-      style={{ zIndex: win.z, display: win.minimized ? 'none' : undefined }}
+      style={{ zIndex: win.z, pointerEvents: win.minimized ? 'none' : undefined }}
     >
-      <motion.section
+      {/* Minimized windows stay mounted (keeping their state) but shrink toward the taskbar and become inert. */}
+      <m.section
         role="dialog"
         aria-label={t(`apps.${win.id}`)}
-        initial={{ opacity: 0, scale: 0.96, y: 8 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.16, ease: 'easeOut' }}
+        inert={win.minimized}
+        initial={{ opacity: 0, scale: 0.94, y: 12 }}
+        animate={win.minimized ? { opacity: 0, scale: 0.6, y: 240 } : { opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.94, transition: { duration: 0.14 } }}
+        transition={{ duration: win.minimized ? 0.22 : 0.18, ease: 'easeOut' }}
         onPointerDownCapture={() => focus(win.id)}
         className={clsx(
           'flex h-full flex-col overflow-hidden border border-border bg-surface backdrop-blur-xl',
@@ -72,7 +75,7 @@ export default function Window({ win }: { win: WindowState }) {
         <div className="min-h-0 flex-1 overflow-auto">
           <AppContent id={win.id} />
         </div>
-      </motion.section>
+      </m.section>
     </Rnd>
   )
 }

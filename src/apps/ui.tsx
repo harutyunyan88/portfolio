@@ -3,6 +3,9 @@ import type { ReactNode } from 'react'
 
 // Small building blocks shared by the app contents.
 
+/** Inline style that delays an `animate-rise` entrance, so list items appear one after another. */
+export const stagger = (index: number, stepMs = 40) => ({ animationDelay: `${index * stepMs}ms` })
+
 export function AppPage({ title, intro, children }: { title: string; intro?: string; children: ReactNode }) {
   return (
     <div className="@container p-5 sm:p-7">
