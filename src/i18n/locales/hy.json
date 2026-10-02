@@ -17,8 +17,8 @@
   },
   "common": {
     "comingSoon": "Այս բաժինը դեռ պատրաստվում է, շուտով կլինի։",
-    "quickView": "Արագ դիտում",
-    "quickViewHint": "Ռեկրուտերների համար՝ ամեն ինչ մեկ էջում",
+    "quickView": "Պարզ տարբերակ",
+    "quickViewHint": "HR մասնագետների համար",
     "backToDesktop": "Վերադառնալ աշխատասեղան",
     "back": "Հետ",
     "present": "Մինչ օրս"
@@ -98,7 +98,7 @@
       "backend": "Backend",
       "databases": "Տվյալների բազաներ",
       "apis": "API-ներ և թեստավորում",
-      "ai": "AI & LLMs",
+      "ai": "AI և LLM",
       "tools": "Գործիքներ և DevOps"
     }
   },
@@ -112,8 +112,8 @@
         "role": "Full Stack ծրագրավորող",
         "location": "Երևան, Հայաստան",
         "bullets": [
-          "Ստեղծել եմ full-stack հավելվածներ React.js-ով, Redux/MobX-ով, Python-ով (Django, FastAPI), PostgreSQL-ով և SQLAlchemy-ով։",
-          "Արել եմ դերերով մուտքի կառավարում և JWT աուտենտիֆիկացիա՝ access և refresh թոքեններով։",
+          "Full-stack հավելվածների ստեղծում և զարգացում՝ կիրառելով React.js, Redux/MobX, Python (Django, FastAPI), PostgreSQL և SQLAlchemy։",
+          "Role-based access control-ի և JWT authentication-ի իրականացում՝ access և refresh token-ների կիրառմամբ։",
           "Գրել եմ REST API-ներ Django Ninja-ով և frontend-ը կապել backend սերվիսների ու բազաների հետ։",
           "Pandas-ով մշակել եմ CSV տվյալներ և FPDF-ով ավտոմատ PDF հաշվետվություններ եմ գեներացրել։",
           "Գրել եմ unit և integration թեստեր բիզնես լոգիկայի, API-ների և աշխատանքային պրոցեսների համար։",
@@ -124,12 +124,12 @@
         "role": "Front End ծրագրավորող",
         "location": "Հեռավար",
         "bullets": [
-          "Ստեղծել և զարգացրել եմ անշարժ գույքի կառավարման մեծ SPA՝ React.js-ով, TypeScript-ով, Vite-ով և MUI-ով։",
-          "Սարքել եմ բազմակի օգտագործվող UI կոմպոնենտներ, աղյուսակներ, ֆորմաներ և feature-based արխիտեկտուրա մի քանի բիզնես մոդուլների համար։",
-          "REST API-ները ինտեգրել եմ Redux Toolkit-ով ու RTK Query-ով՝ քեշավորում, invalidation, աուտենտիֆիկացիա և թոքենի ավտոմատ թարմացում։",
-          "Արել եմ դերերով մուտք, պաշտպանված route-ներ, երկլեզու (անգլերեն/ֆրանսերեն) ինտերֆեյս և responsive դիզայն։",
-          "Սարքել եմ կոնֆիգուրացիայով աշխատող ֆորմաներ React Hook Form-ով և Zod-ով՝ վալիդացիայով, սխալների մշակմամբ ու տվյալների հետ աշխատանքով։",
-          "Մասնակցել եմ deploy-ին ու թողարկումներին Git/GitHub-ով և Azure Static Web Apps-ով։"
+          "Թիմի հետ միասին ստեղծել և զարգացրել ենք անշարժ գույքի կառավարման մեծ SPA (React.js, TypeScript, Vite, MUI):",
+          "Ստեղծել եմ reusable UI components, data tables, forms, ինչպես նաև feature-based architecture մի քանի business modules-ի համար։",
+          "REST API-ների ինտեգրացիա Redux Toolkit-ով և RTK Query-ով՝ ապահովելով caching, invalidation, authentication և token-ների ավտոմատ refresh։",
+          "Role-Based Access Control(RBAC)-ի, protected route-ների, երկլեզու (English/French) UI-ի և responsive layout-ների իրականացում։",
+          "Configuration-driven form-երի մշակում React Hook Form-ով և Zod-ով․ validation-ի, error handling-ի և data workflow-ների իրականացում։",
+          "Deployment և delivery պրոցեսների ապահովում՝ կիրառելով Git/GitHub և Azure Static Web Apps։"
         ]
       }
     }
@@ -139,54 +139,53 @@
     "kinds": {
       "client": "Պատվիրատուի նախագիծ",
       "personal": "Անձնական նախագիծ",
-      "learning": "Learning project"
+      "learning": "Ուսումնական նախագիծ"
     },
     "roles": {
       "frontend": "Frontend",
       "fullstack": "Full stack"
     },
     "private": "Պատվիրատուի փակ կոդ է, կարող եմ պատմել հարցազրույցի ժամանակ",
-    "code": "Կոդ",
     "live": "Դիտել",
     "items": {
       "propertyManagement": {
         "title": "Անշարժ գույքի կառավարման հարթակ",
-        "description": "Մեծ single-page հավելված անշարժ գույքի կառավարման համար՝ մի քանի բիզնես մոդուլներով։ Արել եմ պատվիրատուի համար որպես ֆրիլանս նախագիծ։",
+        "description": "Back-office պլատֆորմ բնակարանատերերի ասոցիացիաների (կոնդոմինիումների) համար, որով մենեջերները, ադմինները ու շենքերի նախագահները վարում են ամենօրյա գործերն ու հաշվապահությունը։ Ես արել եմ frontend-ը՝ երկլեզու (անգլերեն/ֆրանսերեն), դերերով աշխատող SPA՝ մոտ 48 000 տող TypeScript։",
         "highlights": [
-          "Syndicate, management and accounting modules: buildings and units, suppliers, disputes, service requests, budgets, journals, expenses, collections and bank reconciliations",
-          "RTK Query data layer with ~180 typed endpoints, tag-based cache invalidation and silent JWT refresh-and-retry",
-          "Config-driven forms with React Hook Form and Zod, plus a generic DataGrid table with server-side pagination and filtering",
-          "Role-based access, unsaved-changes guard, custom MUI theme, deployed to Azure Static Web Apps"
+          "Մոդուլներ սինդիկատների, կառավարման ու հաշվապահության համար՝ շենքեր ու բնակարաններ, մատակարարներ, վեճեր, սպասարկման հայտեր, բյուջեներ, ժուռնալներ, ծախսեր, հավաքագրումներ ու բանկային համադրումներ",
+          "RTK Query-ով data layer՝ ~180 տիպիզացված endpoint, cache-ի invalidation tag-երով ու JWT-ի աննկատ refresh՝ request-ի կրկնությամբ",
+          "Կոնֆիգով հավաքվող ֆորմաներ React Hook Form-ով ու Zod-ով, ու ունիվերսալ DataGrid աղյուսակ՝ server-side pagination-ով ու ֆիլտրերով",
+          "Դերերով մուտք, չպահպանված փոփոխությունների պաշտպանություն, սեփական MUI թեմա, deploy Azure Static Web Apps-ում"
         ]
       },
       "aiBlogGenerator": {
-        "title": "AI Blog Generator — Management Dashboard",
-        "description": "An admin dashboard for an AI pipeline that writes SEO blog posts for many marketing funnels and publishes them to GoHighLevel. I built the frontend that configures each funnel and reviews the generated posts.",
+        "title": "AI Blog Generator — ադմին պանել",
+        "description": "Ադմին պանել AI pipeline-ի համար, որը շատ մարքեթինգային funnel-ների համար SEO բլոգ-փոստեր է գրում ու հրապարակում GoHighLevel-ում։ Ես արել եմ frontend-ը՝ ամեն funnel-ի կարգավորումն ու գեներացված փոստերի դիտումը։",
         "highlights": [
-          "Funnel management: per-funnel OpenAI, Shutterstock and scraped-data settings, plus publishing schedules with time windows and rate limits",
-          "OAuth 2.0 connection flows for GoHighLevel and Google Search Console",
-          "Generate a post, edit its HTML in place and publish it to the client's blog in one screen",
-          "MobX stores, protected routes, Formik + Yup forms and an in-app issue reporter"
+          "Funnel-ների կառավարում՝ ամեն մեկի համար առանձին OpenAI, Shutterstock ու scrape արված տվյալների կարգավորումներ, ու հրապարակման գրաֆիկ՝ ժամային միջակայքերով ու լիմիտներով",
+          "GoHighLevel-ի ու Google Search Console-ի միացում OAuth 2.0-ով",
+          "Գեներացնել փոստը, խմբագրել HTML-ը հենց տեղում ու հրապարակել պատվիրատուի բլոգում՝ մեկ էկրանում",
+          "MobX store-եր, պաշտպանված route-ներ, Formik + Yup ֆորմաներ ու ներկառուցված issue reporter"
         ]
       },
       "giftsMarketplace": {
-        "title": "Local Gifts Marketplace & Franchise Platform",
-        "description": "A gift-card marketplace where shoppers buy gifts from nearby merchants in a mobile app, run by a franchise network. I worked full stack: the FastAPI backend and the React back office for super users, franchisees, sub-franchisees and merchants.",
+        "title": "Նվերների մարքեթփլեյս ու ֆրանշիզային պլատֆորմ",
+        "description": "Gift card-երի մարքեթփլեյս, որտեղ օգտատերերը մոբայլ հավելվածով նվերներ են գնում մոտակա խանութներից, իսկ ամեն ինչը կառավարում է ֆրանշիզային ցանցը։ Աշխատել եմ full stack՝ FastAPI backend-ն ու React back-office-ը super user-ների, ֆրանշիզատերերի, սուբ-ֆրանշիզատերերի ու merchant-ների համար։",
         "highlights": [
-          "Franchise territories drawn as polygons on Google Maps and matched to merchants with PostGIS geo queries",
-          "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
-          "Celery + Redis jobs for mass email, Firebase push notifications and expiring gifts and promos",
-          "Dockerized stack (Nginx, PostgreSQL, Redis, Celery, Flower) deployed through GitLab CI"
+          "Ֆրանշիզայի տարածքները նկարվում են Google Maps-ում որպես պոլիգոններ ու համապատասխանեցվում merchant-ներին PostGIS geo query-ներով",
+          "Merchant-ների դրամապանակներ, վճարումներ ու գումարի դուրսբերում Stripe Connect-ով՝ տրանզակցիաների ու կոմիսիաների պատմությամբ",
+          "Celery + Redis background task-եր՝ մասսայական email-ներ, Firebase push notification-ներ ու ժամկետանց նվերների ու promo-ների անջատում",
+          "Ամբողջը Docker-ում (Nginx, PostgreSQL, Redis, Celery, Flower), deploy GitLab CI-ով"
         ]
       },
       "aiLab": {
-        "title": "AI Fundamentals Lab — Building with Claude",
-        "description": "A guided course I'm working through to learn how to build LLM features on Anthropic's Claude API. Lesson by lesson, I build each concept as a FastAPI endpoint: from prompting and streaming to retrieval-augmented generation (RAG) and an agent that uses tools.",
+        "title": "AI Fundamentals Lab — սովորում եմ աշխատել Claude-ի հետ",
+        "description": "Կուրս, որ անցնում եմ, որպեսզի սովորեմ LLM ֆունկցիոնալ սարքել Anthropic-ի Claude API-ով։ Դաս առ դաս ամեն թեման սարքում եմ որպես առանձին FastAPI endpoint՝ prompt-ներից ու streaming-ից մինչև RAG (retrieval-augmented generation) ու tool-եր օգտագործող agent։",
         "highlights": [
-          "RAG pipeline: paragraph-aware chunking, Voyage AI embeddings in pgvector, semantic search and answers grounded in the retrieved documents",
-          "Tool-use agent where Claude decides when to call a calculator or search the document store",
-          "Streaming chat over Server-Sent Events with a React client, plus conversation memory stored in PostgreSQL",
-          "Production basics: structured output, retries and error handling, and prompt caching to cut cost"
+          "RAG pipeline՝ տեքստի բաժանում chunk-երի ըստ պարբերությունների, Voyage AI embedding-ներ pgvector-ում, semantic search ու պատասխաններ՝ գտնված փաստաթղթերի հիման վրա",
+          "Tool use-ով agent, որտեղ Claude-ն ինքն է որոշում՝ երբ կանչել հաշվիչը կամ փնտրել փաստաթղթերում",
+          "Streaming չատ Server-Sent Events-ով ու React client-ով, ու զրույցի հիշողություն PostgreSQL-ում",
+          "Production-ի հիմքեր՝ structured output, retry-ներ ու error handling, ու prompt caching՝ ծախսը կրճատելու համար"
         ]
       },
       "portfolio": {
@@ -224,43 +223,35 @@
     }
   },
   "interests": {
-    "intro": "Ինչով եմ զբաղվում, երբ կոդ չեմ գրում։",
     "items": {
       "football": {
-        "title": "Ֆուտբոլ",
-        "description": "Խաղում եմ ընկերներիս հետ ու նայում մեծ խաղերը։"
+        "title": "Ֆուտբոլ"
       },
       "gaming": {
-        "title": "Խաղեր",
-        "description": "Մասամբ խաղերի շնորհիվ է, որ այս պորտֆոլիոն աշխատասեղանի տեսք ունի։"
+        "title": "Վիդեոխաղեր"
       },
       "ai": {
-        "title": "AI",
-        "description": "Փորձարկում եմ AI գործիքներ ու տեսնում, թե ինչպես են դրանք փոխում ծրագրավորումը։"
+        "title": "AI"
       },
       "movies": {
-        "title": "Ֆիլմեր",
-        "description": "Լավ ֆիլմը շաբաթն ավարտելու իմ սիրելի ձևն է։"
+        "title": "Ֆիլմեր"
       },
       "music": {
-        "title": "Երաժշտություն",
-        "description": "Աշխատելիս միշտ ինչ-որ բան է հնչում։"
+        "title": "Երաժշտություն"
       },
       "cooking": {
-        "title": "Խոհարարություն",
-        "description": "Փորձում եմ նոր բաղադրատոմսեր, հայկական դասականներն էլ հետը։"
+        "title": "Խոհարարություն"
       },
       "travel": {
-        "title": "Ճանապարհորդություն",
-        "description": "Նոր վայրեր, մշակույթներ ու խոհանոցներ բացահայտել։"
+        "title": "Ճանապարհորդություն"
       }
     }
   },
   "contact": {
-    "intro": "Ունե՞ք աշխատանքի առաջարկ, նախագիծ կամ հարց։ Գրեք ինձ կամ կապվեք ուղիղ։",
+    "intro": "Հարցեր կամ առաջարկներ ունենալու դեպքում կարող եք կապվել ինձ հետ ներքևում եղած տարբերակներով։",
     "labels": {
       "email": "Email",
-      "phone": "Հեռախոս",
+      "phone": "Հեռախոսահամար",
       "telegram": "Telegram",
       "github": "GitHub",
       "linkedin": "LinkedIn"
@@ -288,24 +279,24 @@
   },
   "terminal": {
     "welcome": "Բարի գալուստ ArsenOS։ Գրեք 'help'՝ հրամանները տեսնելու համար։",
-    "notFound": "այսպիսի հրաման չկա՝ {{cmd}}։ Գրեք 'help'՝ ցուցակը տեսնելու համար։",
+    "notFound": "'{{cmd}}' հրաման գոյություն չունի․ գրեք 'help'՝ հրամանների ցանկը տեսնելու համար։",
     "help": {
-      "help": "ցույց տալ այս ցուցակը",
-      "about": "ով եմ ես",
-      "skills": "իմ տեխնոլոգիաները",
-      "experience": "որտեղ եմ աշխատել",
-      "projects": "ինչ եմ ստեղծել",
-      "contact": "ինչպես կապվել ինձ հետ",
+      "help": "հրամանները տեսնելու համար",
+      "about": "իմ մասին",
+      "skills": "հմտություններ",
+      "experience": "աշխատանքային փորձ",
+      "projects": "նախագծեր",
+      "contact": "կոնտակտներ",
       "cv": "ներբեռնել իմ CV-ն",
-      "open": "բացել հավելված, օրինակ՝ 'open projects'",
-      "theme": "փոխել լուսավոր/մութ ռեժիմը",
+      "open": "բացել բաժին, օրինակ՝ 'open projects'",
+      "theme": "փոխել լուսավորության ռեժիմը",
       "lang": "փոխել լեզուն՝ lang en | ru | hy",
-      "clear": "մաքրել էկրանը"
+      "clear": "մաքրել տերմինալը"
     },
     "opening": "Բացվում է {{app}}…",
-    "openUsage": "օգտագործում՝ open <app>։ Հավելվածներ՝ {{apps}}",
+    "openUsage": "օգտագործում՝ open <section>։ Բաժիններ {{apps}}",
     "langUsage": "օգտագործում՝ lang en | ru | hy",
-    "themeSwitched": "Թեման փոխվեց՝ {{theme}}։",
+    "themeSwitched": "Լուսավորությունը փոխվեց՝ {{theme}}։",
     "downloading": "CV-ն ներբեռնվում է…",
     "sudo": "Լավ փորձ էր 😄 Այստեղ root հասանելիություն չունեք, բայց կարող եք ինձ գրել։"
   }

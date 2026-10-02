@@ -9,7 +9,7 @@ import {
   IoSparkles,
 } from 'react-icons/io5'
 
-// Titles and descriptions live in the locale files under `interests.items.<id>`.
+// Titles live in the locale files under `interests.items.<id>.title`.
 export type Interest = {
   id: 'football' | 'gaming' | 'ai' | 'movies' | 'music' | 'cooking' | 'travel'
   icon: IconType

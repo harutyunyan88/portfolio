@@ -121,8 +121,7 @@
       "id": "portfolio",
       "kind": "personal",
       "role": "fullstack",
-      "tech": ["React", "TypeScript", "Tailwind CSS", "Zustand", "i18next", "FastAPI", "PostgreSQL", "Vercel"],
-      "links": { "github": "https://github.com/harutyunyan88" }
+      "tech": ["React", "TypeScript", "Tailwind CSS", "Zustand", "i18next", "FastAPI", "PostgreSQL", "Vercel"]
     }
   ],
   "courses": [

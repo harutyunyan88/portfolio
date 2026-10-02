@@ -146,7 +146,6 @@
       "fullstack": "Full stack"
     },
     "private": "Private client code, available to discuss in an interview",
-    "code": "Code",
     "live": "Live",
     "items": {
       "propertyManagement": {
@@ -227,32 +226,25 @@
     "intro": "What I do when I'm not coding.",
     "items": {
       "football": {
-        "title": "Football",
-        "description": "Playing with friends and following the big matches."
+        "title": "Football"
       },
       "gaming": {
-        "title": "Gaming",
-        "description": "Games are part of why this portfolio looks like a desktop."
+        "title": "Gaming"
       },
       "ai": {
-        "title": "AI",
-        "description": "Exploring AI tools and how they change the way we build software."
+        "title": "AI"
       },
       "movies": {
-        "title": "Movies",
-        "description": "A good film is my favourite way to end the week."
+        "title": "Movies"
       },
       "music": {
-        "title": "Music",
-        "description": "Always something playing while I work."
+        "title": "Music"
       },
       "cooking": {
-        "title": "Cooking",
-        "description": "Trying new recipes, Armenian classics included."
+        "title": "Cooking"
       },
       "travel": {
-        "title": "Traveling",
-        "description": "Discovering new places, cultures and food."
+        "title": "Traveling"
       }
     }
   },
