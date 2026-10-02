@@ -14,7 +14,8 @@ export type Project = {
   /** Tailwind gradient classes for the card banner, used until there are screenshots. */
   gradient: string
   tech: string[]
-  links?: { github?: string; live?: string }
+  /** A live demo, if there is one. Code is reachable through the GitHub link in About Me. */
+  links?: { live?: string }
 }
 
 const LOOK: Record<ProjectId, Pick<Project, 'icon' | 'gradient'>> = {

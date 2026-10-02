@@ -75,11 +75,11 @@
   "about": {
     "greeting": "Привет, я Арсен 👋",
     "bio": [
-      "Я Full Stack разработчик из Еревана, у меня {{years}}+ лет опыта. Делаю реальные веб-приложения на Python (Django, FastAPI) и React с TypeScript.",
-      "Мне нравится вести фичу от начала до конца: спроектировать API и базу данных, защитить всё через JWT и роли, а потом сделать быстрый и удобный интерфейс. Последнее время делаю большие SPA на Redux Toolkit, RTK Query, React Hook Form и Zod.",
-      "Открыт к новым предложениям, где смогу полностью отвечать за свою часть работы, работать в сильной команде и дальше расти."
+      "Я Full Stack разработчик из Еревана, {{years}}+ лет делаю веб-приложения — от back-office платформ и маркетплейсов до админ-панелей. Люблю превращать сложные бизнес-процессы в продукты, которыми просто и удобно пользоваться.",
+      "В основном работаю с Python (Django, FastAPI) и React с TypeScript, могу сам довести фичу от базы данных до интерфейса. Сейчас ещё учусь делать AI-фичи на Claude API.",
+      "Работал и в командах, и самостоятельно на фриланс-проектах, так что мне комфортно и плотно работать с командой, и полностью вести задачу самому. Для меня важны честное общение, полезные code review и простой, понятный код."
     ],
-    "siteNote": "I built this portfolio with vibe coding, together with AI, as a small desktop-style OS, so you can get to know me in a more fun way than a PDF. Open a few windows, try the terminal, or switch to Quick view if you're short on time.",
+    "siteNote": "Это портфолио я сделал с помощью vibe coding вместе с AI — в виде маленькой OS прямо в браузере, чтобы познакомиться со мной было интереснее, чем по обычному PDF. Откройте пару окон, попробуйте терминал или переключитесь на «Быстрый просмотр», если мало времени.",
     "facts": {
       "experience": "Опыт",
       "experienceValue": "{{years}}+ лет",
@@ -98,7 +98,7 @@
       "backend": "Backend",
       "databases": "Базы данных",
       "apis": "API и тестирование",
-      "ai": "AI & LLMs",
+      "ai": "AI и LLM",
       "tools": "Инструменты и DevOps"
     }
   },
@@ -139,54 +139,53 @@
     "kinds": {
       "client": "Проект для клиента",
       "personal": "Личный проект",
-      "learning": "Learning project"
+      "learning": "Учебный проект"
     },
     "roles": {
       "frontend": "Frontend",
       "fullstack": "Full stack"
     },
     "private": "Закрытый код клиента, могу рассказать на собеседовании",
-    "code": "Код",
     "live": "Открыть",
     "items": {
       "propertyManagement": {
         "title": "Платформа управления недвижимостью",
-        "description": "Большое одностраничное приложение для управления недвижимостью с несколькими бизнес-модулями. Делал для клиента как фриланс-проект.",
+        "description": "Back-office платформа для ассоциаций собственников жилья (кондоминиумов): с ней менеджеры, администраторы и председатели домов ведут ежедневную работу и бухгалтерию. Я делал frontend — двуязычное (английский/французский) SPA с учётом ролей, около 48 000 строк на TypeScript.",
         "highlights": [
-          "Syndicate, management and accounting modules: buildings and units, suppliers, disputes, service requests, budgets, journals, expenses, collections and bank reconciliations",
-          "RTK Query data layer with ~180 typed endpoints, tag-based cache invalidation and silent JWT refresh-and-retry",
-          "Config-driven forms with React Hook Form and Zod, plus a generic DataGrid table with server-side pagination and filtering",
-          "Role-based access, unsaved-changes guard, custom MUI theme, deployed to Azure Static Web Apps"
+          "Модули по синдикатам, управлению и бухгалтерии: здания и квартиры, поставщики, споры, заявки на обслуживание, бюджеты, журналы, расходы, сборы и сверка с банком",
+          "Слой данных на RTK Query: ~180 типизированных endpoint-ов, инвалидация кэша по тегам и незаметное обновление JWT с повтором запроса",
+          "Формы, собранные из конфига, на React Hook Form и Zod, плюс универсальная таблица на DataGrid с серверной пагинацией и фильтрами",
+          "Доступ по ролям, защита от ухода со страницы с несохранёнными изменениями, своя тема MUI, деплой на Azure Static Web Apps"
         ]
       },
       "aiBlogGenerator": {
-        "title": "AI Blog Generator — Management Dashboard",
-        "description": "An admin dashboard for an AI pipeline that writes SEO blog posts for many marketing funnels and publishes them to GoHighLevel. I built the frontend that configures each funnel and reviews the generated posts.",
+        "title": "AI Blog Generator — панель управления",
+        "description": "Админ-панель для AI-пайплайна, который пишет SEO-статьи для множества маркетинговых воронок и публикует их в GoHighLevel. Я делал frontend: настройку каждой воронки и просмотр сгенерированных постов.",
         "highlights": [
-          "Funnel management: per-funnel OpenAI, Shutterstock and scraped-data settings, plus publishing schedules with time windows and rate limits",
-          "OAuth 2.0 connection flows for GoHighLevel and Google Search Console",
-          "Generate a post, edit its HTML in place and publish it to the client's blog in one screen",
-          "MobX stores, protected routes, Formik + Yup forms and an in-app issue reporter"
+          "Управление воронками: отдельные настройки OpenAI, Shutterstock и спарсенных данных для каждой, плюс расписание публикаций с временными окнами и лимитами",
+          "Подключение GoHighLevel и Google Search Console через OAuth 2.0",
+          "Сгенерировать пост, отредактировать его HTML прямо на месте и опубликовать в блог клиента — всё на одном экране",
+          "MobX-сторы, защищённые роуты, формы на Formik + Yup и встроенная отправка баг-репортов"
         ]
       },
       "giftsMarketplace": {
-        "title": "Local Gifts Marketplace & Franchise Platform",
-        "description": "A gift-card marketplace where shoppers buy gifts from nearby merchants in a mobile app, run by a franchise network. I worked full stack: the FastAPI backend and the React back office for super users, franchisees, sub-franchisees and merchants.",
+        "title": "Маркетплейс подарков и франчайзинговая платформа",
+        "description": "Маркетплейс подарочных карт: покупатели в мобильном приложении покупают подарки у ближайших магазинов, а управляет всем сеть франчайзи. Я работал full stack: backend на FastAPI и back-office на React для суперюзеров, франчайзи, суб-франчайзи и мерчантов.",
         "highlights": [
-          "Franchise territories drawn as polygons on Google Maps and matched to merchants with PostGIS geo queries",
-          "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
-          "Celery + Redis jobs for mass email, Firebase push notifications and expiring gifts and promos",
-          "Dockerized stack (Nginx, PostgreSQL, Redis, Celery, Flower) deployed through GitLab CI"
+          "Территории франчайзи рисуются полигонами на Google Maps и сопоставляются с мерчантами через гео-запросы PostGIS",
+          "Кошельки мерчантов, выплаты и вывод средств через Stripe Connect, с историей транзакций и комиссий",
+          "Фоновые задачи на Celery + Redis: массовые рассылки, push-уведомления через Firebase, отключение истёкших подарков и промо",
+          "Всё в Docker (Nginx, PostgreSQL, Redis, Celery, Flower), деплой через GitLab CI"
         ]
       },
       "aiLab": {
-        "title": "AI Fundamentals Lab — Building with Claude",
-        "description": "A guided course I'm working through to learn how to build LLM features on Anthropic's Claude API. Lesson by lesson, I build each concept as a FastAPI endpoint: from prompting and streaming to retrieval-augmented generation (RAG) and an agent that uses tools.",
+        "title": "AI Fundamentals Lab — учусь работать с Claude",
+        "description": "Курс, который я прохожу, чтобы научиться делать LLM-фичи на Claude API от Anthropic. Урок за уроком я делаю каждую тему отдельным endpoint-ом на FastAPI: от промптов и стриминга до RAG (retrieval-augmented generation) и агента, который сам пользуется инструментами.",
         "highlights": [
-          "RAG pipeline: paragraph-aware chunking, Voyage AI embeddings in pgvector, semantic search and answers grounded in the retrieved documents",
-          "Tool-use agent where Claude decides when to call a calculator or search the document store",
-          "Streaming chat over Server-Sent Events with a React client, plus conversation memory stored in PostgreSQL",
-          "Production basics: structured output, retries and error handling, and prompt caching to cut cost"
+          "RAG-пайплайн: разбивка текста на чанки по абзацам, эмбеддинги Voyage AI в pgvector, семантический поиск и ответы на основе найденных документов",
+          "Агент с tool use: Claude сам решает, когда вызвать калькулятор или поиск по документам",
+          "Стриминг-чат через Server-Sent Events с клиентом на React и память диалога в PostgreSQL",
+          "Основы для продакшена: structured output, повторные попытки и обработка ошибок, prompt caching для экономии"
         ]
       },
       "portfolio": {
@@ -227,32 +226,25 @@
     "intro": "Чем я занимаюсь, когда не пишу код.",
     "items": {
       "football": {
-        "title": "Футбол",
-        "description": "Играю с друзьями и смотрю большие матчи."
+        "title": "Футбол"
       },
       "gaming": {
-        "title": "Игры",
-        "description": "Отчасти из-за игр это портфолио и выглядит как рабочий стол."
+        "title": "Игры"
       },
       "ai": {
-        "title": "ИИ",
-        "description": "Пробую ИИ-инструменты и смотрю, как они меняют разработку."
+        "title": "ИИ"
       },
       "movies": {
-        "title": "Кино",
-        "description": "Хороший фильм — мой любимый способ закончить неделю."
+        "title": "Кино"
       },
       "music": {
-        "title": "Музыка",
-        "description": "Во время работы у меня всегда что-то играет."
+        "title": "Музыка"
       },
       "cooking": {
-        "title": "Кулинария",
-        "description": "Пробую новые рецепты, в том числе армянскую классику."
+        "title": "Кулинария"
       },
       "travel": {
-        "title": "Путешествия",
-        "description": "Открываю новые места, культуры и кухни."
+        "title": "Путешествия"
       }
     }
   },
