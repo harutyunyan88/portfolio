@@ -37,7 +37,8 @@ i18n
     fallbackLng: 'en',
     load: 'languageOnly',
     interpolation: { escapeValue: false },
-    detection: { order: ['localStorage', 'navigator'], lookupLocalStorage: 'lang', caches: ['localStorage'] },
+    // No browser-language detection: first visit is English, a chosen language is remembered.
+    detection: { order: ['localStorage'], lookupLocalStorage: 'lang', caches: ['localStorage'] },
   })
 
 i18n.on('languageChanged', (lng) => {

@@ -18,13 +18,13 @@
   "common": {
     "comingSoon": "This section is being built and will be available soon.",
     "quickView": "Quick view",
-    "quickViewHint": "For recruiters: everything on one page",
+    "quickViewHint": "For recruiters",
     "backToDesktop": "Back to desktop",
     "back": "Back",
     "present": "Present"
   },
   "desktop": {
-    "hint": "Double-click an icon to open it"
+    "hint": "Double-click a folder to open it."
   },
   "window": {
     "minimize": "Minimize",
@@ -75,11 +75,13 @@
   "about": {
     "greeting": "Hi, I'm Arsen 👋",
     "bio": [
-      "I'm a Full Stack Developer from Yerevan with {{years}}+ years of experience building web applications, from back-office platforms and marketplaces to admin dashboards. I enjoy turning complex business workflows into products that feel simple to use.",
-      "I work mainly with Python (Django, FastAPI) and React with TypeScript, and I'm comfortable taking a feature from the database all the way to the interface. Right now I'm also learning to build AI features with the Claude API.",
-      "I've worked both in teams and independently on freelance projects, so I'm comfortable collaborating closely or owning a task on my own. I value honest communication, helpful code reviews and simple, readable code."
+      "I'm a Full-Stack Developer with {{years}}+ years of experience, working mainly with Python (Django, FastAPI), React and TypeScript.",
+      "I value ownership, teamwork, honest and open communication, and writing clean, readable, maintainable code. For me it matters to understand not just how to write the code, but why it should be built that way.",
+      "I've worked both on-site and remotely on projects of different sizes and complexity, and I'm comfortable working within a team as well as solving problems independently and delivering features end to end.",
+      "I keep growing my skills, exploring new technologies and not settling for what I already know. Lately I've been going deeper into AI/LLMs, working hands-on with RAG, LLM APIs, AI agents and AI-assisted development.",
+      "I'm always up for new challenges and hard problems, because that's where I learn and grow the most."
     ],
-    "siteNote": "I built this portfolio with vibe coding, together with AI, as a small desktop-style OS, so you can get to know me in a more fun way than a PDF. Open a few windows, try the terminal, or switch to Quick view if you're short on time.",
+    "siteNote": "I built this portfolio with vibe coding as a small OS in your browser, so you can get to know me in a more fun way than a regular PDF. And for HR folks, there's also a simpler, faster Quick view, so my portfolio won't take up much of your time. 😁",
     "facts": {
       "experience": "Experience",
       "experienceValue": "{{years}}+ years",
@@ -92,7 +94,7 @@
     "contactMe": "Contact me"
   },
   "skills": {
-    "intro": "Technologies I use to design, build and ship web applications.",
+    "intro": "Technologies I work with.",
     "groups": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -150,17 +152,17 @@
     "items": {
       "propertyManagement": {
         "title": "Property Management Platform",
-        "description": "A back-office platform for condominium associations, used by property managers, administrators and building presidents to run daily operations and accounting. I built the frontend: a bilingual (English/French), role-aware SPA of about 48,000 lines of TypeScript.",
+        "description": "A back-office platform for condominium associations, used by property managers, administrators and building presidents to run daily operations and accounting. I worked on the frontend: a bilingual (English/French), role-aware SPA.",
         "highlights": [
-          "Syndicate, management and accounting modules: buildings and units, suppliers, disputes, service requests, budgets, journals, expenses, collections and bank reconciliations",
+          "Syndicate, management and accounting modules: buildings and units, suppliers, service requests, budgets, journals, expenses, collections and bank reconciliations",
           "RTK Query data layer with ~180 typed endpoints, tag-based cache invalidation and silent JWT refresh-and-retry",
           "Config-driven forms with React Hook Form and Zod, plus a generic DataGrid table with server-side pagination and filtering",
-          "Role-based access, unsaved-changes guard, custom MUI theme, deployed to Azure Static Web Apps"
+          "Role-based access control (RBAC), unsaved-changes guard, custom MUI configuration, deployed to Azure Static Web Apps"
         ]
       },
       "aiBlogGenerator": {
         "title": "AI Blog Generator — Management Dashboard",
-        "description": "An admin dashboard for an AI pipeline that writes SEO blog posts for many marketing funnels and publishes them to GoHighLevel. I built the frontend that configures each funnel and reviews the generated posts.",
+        "description": "An admin dashboard for an AI pipeline that writes SEO blog posts for many marketing funnels and publishes them to GoHighLevel. I worked on the frontend, handling per-funnel configuration and the display of generated posts.",
         "highlights": [
           "Funnel management: per-funnel OpenAI, Shutterstock and scraped-data settings, plus publishing schedules with time windows and rate limits",
           "OAuth 2.0 connection flows for GoHighLevel and Google Search Console",
@@ -170,7 +172,7 @@
       },
       "giftsMarketplace": {
         "title": "Local Gifts Marketplace & Franchise Platform",
-        "description": "A gift-card marketplace where shoppers buy gifts from nearby merchants in a mobile app, run by a franchise network. I worked full stack: the FastAPI backend and the React back office for super users, franchisees, sub-franchisees and merchants.",
+        "description": "A gift-card marketplace where shoppers buy gifts from nearby merchants in a mobile app, run by a franchise network. I worked Full Stack: the FastAPI backend and the React back office for super users, franchisees, sub-franchisees and merchants.",
         "highlights": [
           "Franchise territories drawn as polygons on Google Maps and matched to merchants with PostGIS geo queries",
           "Merchant wallets, payouts and withdrawals on Stripe Connect, with transaction and commission history",
@@ -179,8 +181,8 @@
         ]
       },
       "aiLab": {
-        "title": "AI Fundamentals Lab — Building with Claude",
-        "description": "A guided course I'm working through to learn how to build LLM features on Anthropic's Claude API. Lesson by lesson, I build each concept as a FastAPI endpoint: from prompting and streaming to retrieval-augmented generation (RAG) and an agent that uses tools.",
+        "title": "AI Fundamentals Lab",
+        "description": "My AI learning project, where I learn to build LLM features with the Claude API. After each topic I write a separate FastAPI endpoint to put what I've learned into practice right away. So far I've covered streaming, tool use, prompt caching, RAG and AI agents.",
         "highlights": [
           "RAG pipeline: paragraph-aware chunking, Voyage AI embeddings in pgvector, semantic search and answers grounded in the retrieved documents",
           "Tool-use agent where Claude decides when to call a calculator or search the document store",
@@ -189,11 +191,11 @@
         ]
       },
       "portfolio": {
-        "title": "This Portfolio — a Desktop OS in the Browser",
-        "description": "The site you're looking at: a desktop-style portfolio with draggable windows, a terminal and a quick view for recruiters, backed by a FastAPI API.",
+        "title": "My Portfolio — an OS in the Browser",
+        "description": "The site you're looking at: a desktop-style portfolio with draggable windows, a terminal and a quick view for HR folks, backed by a FastAPI API.",
         "highlights": [
           "Window manager with drag, resize, focus and minimize built on Zustand and react-rnd",
-          "Three languages (EN/RU/HY), light and dark themes, mobile home-screen layout",
+          "Three languages (EN/RU/HY), light and dark modes, mobile home-screen layout",
           "Contact form with validation on both ends, stored in PostgreSQL and delivered by email"
         ]
       }
